@@ -47,6 +47,7 @@
 <div class="code py highlight-python"><div class="highlight"><pre><span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">from</span> <span class="nn">setuptools</span> <span class="kn">import</span> <span class="n">setup</span>
 
+
 <span class="c"># Utility function to read the README file.</span>
 <span class="c"># Used for the long_description.  It&#39;s nice, because now 1) we have a top level</span>
 <span class="c"># README file and 2) it&#39;s easier to type in the README file than to put a raw</span>
@@ -54,11 +55,9 @@
 <span class="k">def</span> <span class="nf">read</span><span class="p">(</span><span class="n">fname</span><span class="p">):</span>
     <span class="k">return</span> <span class="nb">open</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">__file__</span><span class="p">),</span> <span class="n">fname</span><span class="p">))</span><span class="o">.</span><span class="n">read</span><span class="p">()</span>
 
-<span class="n">name</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">basename</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">dirname</span><span class="p">(</span><span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">realpath</span><span class="p">(</span><span class="n">__file__</span><span class="p">)))</span>
-<span class="n">packages</span> <span class="o">=</span> <span class="p">[</span> <span class="n">name</span><span class="o">.</span><span class="n">split</span><span class="p">(</span><span class="s">&#39;_&#39;</span><span class="p">,</span> <span class="mi">1</span><span class="p">)[</span><span class="mi">1</span><span class="p">]</span> <span class="p">]</span>
 
 <span class="n">config</span> <span class="o">=</span> <span class="p">{}</span>
-<span class="n">config</span><span class="p">[</span><span class="s">&quot;name&quot;</span><span class="p">]</span>             <span class="o">=</span> <span class="n">name</span>
+<span class="n">config</span><span class="p">[</span><span class="s">&quot;name&quot;</span><span class="p">]</span>             <span class="o">=</span> <span class="s">&quot;py_data_helper&quot;</span>
 <span class="n">config</span><span class="p">[</span><span class="s">&quot;version&quot;</span><span class="p">]</span>          <span class="o">=</span> <span class="s">&quot;0.0.1&quot;</span>
 <span class="n">config</span><span class="p">[</span><span class="s">&quot;author&quot;</span><span class="p">]</span>           <span class="o">=</span> <span class="s">&quot;Qevo&quot;</span>
 <span class="n">config</span><span class="p">[</span><span class="s">&quot;author_email&quot;</span><span class="p">]</span>     <span class="o">=</span> <span class="s">&quot;qevo@qevonics.net&quot;</span>
@@ -66,14 +65,14 @@
 <span class="n">config</span><span class="p">[</span><span class="s">&quot;license&quot;</span><span class="p">]</span>          <span class="o">=</span> <span class="s">&quot;MIT&quot;</span>
 <span class="n">config</span><span class="p">[</span><span class="s">&quot;keywords&quot;</span><span class="p">]</span>         <span class="o">=</span> <span class="s">&quot;string hash regex helper&quot;</span>
 <span class="n">config</span><span class="p">[</span><span class="s">&quot;url&quot;</span><span class="p">]</span>              <span class="o">=</span> <span class="s">&quot;https://github.com/qevo/&quot;</span> <span class="o">+</span> <span class="n">config</span><span class="p">[</span><span class="s">&quot;name&quot;</span><span class="p">]</span>
-<span class="n">config</span><span class="p">[</span><span class="s">&quot;packages&quot;</span><span class="p">]</span>         <span class="o">=</span> <span class="n">packages</span>
+<span class="n">config</span><span class="p">[</span><span class="s">&quot;packages&quot;</span><span class="p">]</span>         <span class="o">=</span> <span class="p">[</span><span class="s">&quot;data_helper&quot;</span><span class="p">]</span>
 <span class="n">config</span><span class="p">[</span><span class="s">&quot;install_requires&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="p">[]</span>
 <span class="n">config</span><span class="p">[</span><span class="s">&quot;long_description&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="n">read</span><span class="p">(</span><span class="s">&#39;README.md&#39;</span><span class="p">)</span>
 <span class="n">config</span><span class="p">[</span><span class="s">&quot;classifiers&quot;</span><span class="p">]</span>      <span class="o">=</span> <span class="p">[</span>
-        <span class="s">&quot;Development Status :: 3 - Alpha&quot;</span><span class="p">,</span>
-        <span class="s">&quot;Topic :: Utilities&quot;</span><span class="p">,</span>
-        <span class="s">&quot;License :: OSI Approved :: MIT License&quot;</span>
-    <span class="p">]</span>
+    <span class="s">&quot;Development Status :: 3 - Alpha&quot;</span><span class="p">,</span>
+    <span class="s">&quot;Topic :: Utilities&quot;</span><span class="p">,</span>
+    <span class="s">&quot;License :: OSI Approved :: MIT License&quot;</span>
+<span class="p">]</span>
 
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
     <span class="n">setup</span><span class="p">(</span><span class="o">**</span><span class="n">config</span><span class="p">)</span>
