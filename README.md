@@ -3,7 +3,7 @@ version 0.0.1
 
 This helper module is a simple set of functions that make some string related activities easier.
 
-Full API documentation can be found in *docs/index.html*
+Full API documentation can be found at [data_helper's documentation](https://py-data-helper.readthedocs.org/) and in *docs/index.html*
 
 ## Install
 ```

@@ -17,6 +17,8 @@ Install
 
     pip install git+git://github.com/qevo/py_data_helper.git
 
+.. note:: Retrieve a copy of the source from `the GitHub repo <https://github.com/qevo/py_data_helper>`_.
+
 Features
 --------
 Hashing support
