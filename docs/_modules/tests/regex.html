@@ -1,0 +1,119 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>tests.regex &mdash; py_data_helper 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="py_data_helper 0.0.1 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="../../index.html">py_data_helper 0.0.1 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for tests.regex</h1><div class="highlight"><pre>
+<span class="sd">&quot;&quot;&quot;Tests for the data_helper.regex module&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">BaseTest</span> <span class="kn">import</span> <span class="n">BaseTestWrapper</span><span class="p">,</span> <span class="n">do_main</span>
+
+
+<div class="viewcode-block" id="WildcardReTestCase"><a class="viewcode-back" href="../../tests.regex.html#tests.regex.WildcardReTestCase">[docs]</a><span class="k">class</span> <span class="nc">WildcardReTestCase</span><span class="p">(</span><span class="n">BaseTestWrapper</span><span class="o">.</span><span class="n">BaseTest</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;regex.wildcard_re() test cases&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="WildcardReTestCase.test_alpha_pattern"><a class="viewcode-back" href="../../tests.regex.html#tests.regex.WildcardReTestCase.test_alpha_pattern">[docs]</a>    <span class="k">def</span> <span class="nf">test_alpha_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if a string with only alpha characters returns with the same value&quot;&quot;&quot;</span>
+
+        <span class="n">string</span> <span class="o">=</span> <span class="s">&#39;abcdefghijklm&#39;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">string</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="WildcardReTestCase.test_alphanum_pattern"><a class="viewcode-back" href="../../tests.regex.html#tests.regex.WildcardReTestCase.test_alphanum_pattern">[docs]</a>    <span class="k">def</span> <span class="nf">test_alphanum_pattern</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if a string with only alphanumeric characters returns with the same value&quot;&quot;&quot;</span>
+
+        <span class="n">string</span> <span class="o">=</span> <span class="s">&#39;abcdefghijklm12345&#39;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">string</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">string</span><span class="p">,</span> <span class="n">result</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="WildcardReTestCase.test_wildcard"><a class="viewcode-back" href="../../tests.regex.html#tests.regex.WildcardReTestCase.test_wildcard">[docs]</a>    <span class="k">def</span> <span class="nf">test_wildcard</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if a string with a wildcard character returns with the correct modification&quot;&quot;&quot;</span>
+
+        <span class="n">string</span> <span class="o">=</span> <span class="s">&#39;foo*bar&#39;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">string</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="s">&#39;foo.*bar&#39;</span><span class="p">)</span>
+</div>
+<div class="viewcode-block" id="WildcardReTestCase.test_punctuation"><a class="viewcode-back" href="../../tests.regex.html#tests.regex.WildcardReTestCase.test_punctuation">[docs]</a>    <span class="k">def</span> <span class="nf">test_punctuation</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if a string with a punctuation character returns with the correct modification&quot;&quot;&quot;</span>
+
+        <span class="n">string</span> <span class="o">=</span> <span class="s">&#39;foo?bar&#39;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">string</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="s">&#39;foo</span><span class="se">\\</span><span class="s">?bar&#39;</span><span class="p">)</span>
+
+</div></div>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">do_main</span><span class="p">()</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="../../index.html">py_data_helper 0.0.1 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Qevo.
+      Last updated on 31 Aug 2015.
+    </div>
+  </body>
+</html>

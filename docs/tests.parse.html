@@ -1,0 +1,196 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>tests.parse module &mdash; py_data_helper 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    './',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="_static/jquery.js"></script>
+    <script type="text/javascript" src="_static/underscore.js"></script>
+    <script type="text/javascript" src="_static/doctools.js"></script>
+    <link rel="top" title="py_data_helper 0.0.1 documentation" href="index.html" />
+    <link rel="up" title="tests package" href="tests.html" />
+    <link rel="next" title="tests.regex module" href="tests.regex.html" />
+    <link rel="prev" title="tests.hash module" href="tests.hash.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="tests.regex.html" title="tests.regex module"
+             accesskey="N">next</a></li>
+        <li class="right" >
+          <a href="tests.hash.html" title="tests.hash module"
+             accesskey="P">previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">py_data_helper 0.0.1 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="tests.html" accesskey="U">tests package</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <div class="section" id="module-tests.parse">
+<span id="tests-parse-module"></span><h1>tests.parse module<a class="headerlink" href="#module-tests.parse" title="Permalink to this headline">¶</a></h1>
+<p>Tests for the data_helper.parse module</p>
+<dl class="class">
+<dt id="tests.parse.ListFilterTestCase">
+<em class="property">class </em><code class="descclassname">tests.parse.</code><code class="descname">ListFilterTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/parse.html#ListFilterTestCase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.parse.ListFilterTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">tests.BaseTest.BaseTest</span></code></p>
+<p>parse.list_filter() test cases</p>
+<dl class="classmethod">
+<dt id="tests.parse.ListFilterTestCase.setUpClass">
+<em class="property">classmethod </em><code class="descname">setUpClass</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/parse.html#ListFilterTestCase.setUpClass"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.parse.ListFilterTestCase.setUpClass" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="method">
+<dt id="tests.parse.ListFilterTestCase.test_caps_only">
+<code class="descname">test_caps_only</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/parse.html#ListFilterTestCase.test_caps_only"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.parse.ListFilterTestCase.test_caps_only" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test a pattern for only capital letters</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.parse.ListFilterTestCase.test_case_i">
+<code class="descname">test_case_i</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/parse.html#ListFilterTestCase.test_case_i"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.parse.ListFilterTestCase.test_case_i" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test a case insensitive pattern</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.parse.ListFilterTestCase.test_file_ext">
+<code class="descname">test_file_ext</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/parse.html#ListFilterTestCase.test_file_ext"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.parse.ListFilterTestCase.test_file_ext" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test a pattern for matching a file extension &#8216;.md&#8217;</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.parse.ListFilterTestCase.test_has_numbers">
+<code class="descname">test_has_numbers</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/parse.html#ListFilterTestCase.test_has_numbers"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.parse.ListFilterTestCase.test_has_numbers" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test a pattern for numbers included</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.parse.ListFilterTestCase.test_wildcard">
+<code class="descname">test_wildcard</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/parse.html#ListFilterTestCase.test_wildcard"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.parse.ListFilterTestCase.test_wildcard" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if a pattern matching any characters returns all</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tests.parse.StrSplitCapsTestCase">
+<em class="property">class </em><code class="descclassname">tests.parse.</code><code class="descname">StrSplitCapsTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/parse.html#StrSplitCapsTestCase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.parse.StrSplitCapsTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">tests.BaseTest.BaseTest</span></code></p>
+<p>parse.str_split_caps() test cases</p>
+<dl class="method">
+<dt id="tests.parse.StrSplitCapsTestCase.test_trim">
+<code class="descname">test_trim</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/parse.html#StrSplitCapsTestCase.test_trim"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.parse.StrSplitCapsTestCase.test_trim" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if whitespace is trimmed</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tests.parse.StrSplitSizeTestCase">
+<em class="property">class </em><code class="descclassname">tests.parse.</code><code class="descname">StrSplitSizeTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/parse.html#StrSplitSizeTestCase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.parse.StrSplitSizeTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">tests.BaseTest.BaseTest</span></code></p>
+<p>parse.str_split_size() test cases</p>
+<dl class="method">
+<dt id="tests.parse.StrSplitSizeTestCase.test_concat_string">
+<code class="descname">test_concat_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/parse.html#StrSplitSizeTestCase.test_concat_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.parse.StrSplitSizeTestCase.test_concat_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if a string concatenated N times is split N times</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.parse.StrSplitSizeTestCase.test_even_length_string">
+<code class="descname">test_even_length_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/parse.html#StrSplitSizeTestCase.test_even_length_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.parse.StrSplitSizeTestCase.test_even_length_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test the value and number of elements returned from a string whose length is an even number</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.parse.StrSplitSizeTestCase.test_integer">
+<code class="descname">test_integer</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/parse.html#StrSplitSizeTestCase.test_integer"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.parse.StrSplitSizeTestCase.test_integer" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test the value and number of elements returned from an integer</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.parse.StrSplitSizeTestCase.test_odd_length_string">
+<code class="descname">test_odd_length_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/parse.html#StrSplitSizeTestCase.test_odd_length_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.parse.StrSplitSizeTestCase.test_odd_length_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test the value and number of elements returned from a string whose length is an odd number</p>
+</dd></dl>
+
+</dd></dl>
+
+</div>
+
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+  <h4>Previous topic</h4>
+  <p class="topless"><a href="tests.hash.html"
+                        title="previous chapter">tests.hash module</a></p>
+  <h4>Next topic</h4>
+  <p class="topless"><a href="tests.regex.html"
+                        title="next chapter">tests.regex module</a></p>
+  <div role="note" aria-label="source link">
+    <h3>This Page</h3>
+    <ul class="this-page-menu">
+      <li><a href="_sources/tests.parse.txt"
+            rel="nofollow">Show Source</a></li>
+    </ul>
+   </div>
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="right" style="margin-right: 10px">
+          <a href="tests.regex.html" title="tests.regex module"
+             >next</a></li>
+        <li class="right" >
+          <a href="tests.hash.html" title="tests.hash module"
+             >previous</a> |</li>
+        <li class="nav-item nav-item-0"><a href="index.html">py_data_helper 0.0.1 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="tests.html" >tests package</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Qevo.
+      Last updated on 31 Aug 2015.
+    </div>
+  </body>
+</html>

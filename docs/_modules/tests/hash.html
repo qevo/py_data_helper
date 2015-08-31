@@ -1,0 +1,159 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>tests.hash &mdash; py_data_helper 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="py_data_helper 0.0.1 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="../../index.html">py_data_helper 0.0.1 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for tests.hash</h1><div class="highlight"><pre>
+<span class="sd">&quot;&quot;&quot;Tests for the data_helper.hash module&quot;&quot;&quot;</span>
+
+<span class="kn">from</span> <span class="nn">BaseTest</span> <span class="kn">import</span> <span class="n">BaseTestWrapper</span><span class="p">,</span> <span class="n">do_main</span>
+
+
+<div class="viewcode-block" id="Md5TestCase"><a class="viewcode-back" href="../../tests.hash.html#tests.hash.Md5TestCase">[docs]</a><span class="k">class</span> <span class="nc">Md5TestCase</span><span class="p">(</span><span class="n">BaseTestWrapper</span><span class="o">.</span><span class="n">BaseTest</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;hash.md5() test cases&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Md5TestCase.test_match"><a class="viewcode-back" href="../../tests.hash.html#tests.hash.Md5TestCase.test_match">[docs]</a>    <span class="k">def</span> <span class="nf">test_match</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if the hash matches&quot;&quot;&quot;</span>
+
+        <span class="n">string</span> <span class="o">=</span> <span class="s">&#39;string to be hashed&#39;</span>
+        <span class="n">known_hash</span> <span class="o">=</span> <span class="s">&#39;ea63287cb93455c84d98580b301c7739&#39;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">string</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">)</span>
+
+</div></div>
+<div class="viewcode-block" id="Sha1TestCase"><a class="viewcode-back" href="../../tests.hash.html#tests.hash.Sha1TestCase">[docs]</a><span class="k">class</span> <span class="nc">Sha1TestCase</span><span class="p">(</span><span class="n">BaseTestWrapper</span><span class="o">.</span><span class="n">BaseTest</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;hash.sha1() test cases&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Sha1TestCase.test_match"><a class="viewcode-back" href="../../tests.hash.html#tests.hash.Sha1TestCase.test_match">[docs]</a>    <span class="k">def</span> <span class="nf">test_match</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if the hash matches&quot;&quot;&quot;</span>
+
+        <span class="n">string</span> <span class="o">=</span> <span class="s">&#39;string to be hashed&#39;</span>
+        <span class="n">known_hash</span> <span class="o">=</span> <span class="s">&#39;9df46bb4e4aa30e7da0966f6ac299da9062bc887&#39;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">string</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">)</span>
+
+</div></div>
+<div class="viewcode-block" id="Sha224TestCase"><a class="viewcode-back" href="../../tests.hash.html#tests.hash.Sha224TestCase">[docs]</a><span class="k">class</span> <span class="nc">Sha224TestCase</span><span class="p">(</span><span class="n">BaseTestWrapper</span><span class="o">.</span><span class="n">BaseTest</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;hash.sha1() test cases&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Sha224TestCase.test_match"><a class="viewcode-back" href="../../tests.hash.html#tests.hash.Sha224TestCase.test_match">[docs]</a>    <span class="k">def</span> <span class="nf">test_match</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if the hash matches&quot;&quot;&quot;</span>
+
+        <span class="n">string</span> <span class="o">=</span> <span class="s">&#39;string to be hashed&#39;</span>
+        <span class="n">known_hash</span> <span class="o">=</span> <span class="s">&#39;5f30cd548eceac0391ca02785ab4a1655091d6a6bbfdb96564458f44&#39;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">string</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">)</span>
+
+</div></div>
+<div class="viewcode-block" id="Sha256TestCase"><a class="viewcode-back" href="../../tests.hash.html#tests.hash.Sha256TestCase">[docs]</a><span class="k">class</span> <span class="nc">Sha256TestCase</span><span class="p">(</span><span class="n">BaseTestWrapper</span><span class="o">.</span><span class="n">BaseTest</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;hash.sha1() test cases&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Sha256TestCase.test_match"><a class="viewcode-back" href="../../tests.hash.html#tests.hash.Sha256TestCase.test_match">[docs]</a>    <span class="k">def</span> <span class="nf">test_match</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if the hash matches&quot;&quot;&quot;</span>
+
+        <span class="n">string</span> <span class="o">=</span> <span class="s">&#39;string to be hashed&#39;</span>
+        <span class="n">known_hash</span> <span class="o">=</span> <span class="s">&#39;6c884c41add964b697febec384c39534c0e003adaca3b193287bcb7614c4b35c&#39;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">string</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">)</span>
+
+</div></div>
+<div class="viewcode-block" id="Sha384TestCase"><a class="viewcode-back" href="../../tests.hash.html#tests.hash.Sha384TestCase">[docs]</a><span class="k">class</span> <span class="nc">Sha384TestCase</span><span class="p">(</span><span class="n">BaseTestWrapper</span><span class="o">.</span><span class="n">BaseTest</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;hash.sha1() test cases&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Sha384TestCase.test_match"><a class="viewcode-back" href="../../tests.hash.html#tests.hash.Sha384TestCase.test_match">[docs]</a>    <span class="k">def</span> <span class="nf">test_match</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if the hash matches&quot;&quot;&quot;</span>
+
+        <span class="n">string</span> <span class="o">=</span> <span class="s">&#39;string to be hashed&#39;</span>
+        <span class="n">known_hash</span> <span class="o">=</span> <span class="s">&#39;c4c19b93f2549604f41ffa45accfbcc7c5cef23b6e14871d668a11a164936a7881f36a404a2f5b45eeff8268024caa0a&#39;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">string</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">)</span>
+
+</div></div>
+<div class="viewcode-block" id="Sha512TestCase"><a class="viewcode-back" href="../../tests.hash.html#tests.hash.Sha512TestCase">[docs]</a><span class="k">class</span> <span class="nc">Sha512TestCase</span><span class="p">(</span><span class="n">BaseTestWrapper</span><span class="o">.</span><span class="n">BaseTest</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;hash.sha1() test cases&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="Sha512TestCase.test_match"><a class="viewcode-back" href="../../tests.hash.html#tests.hash.Sha512TestCase.test_match">[docs]</a>    <span class="k">def</span> <span class="nf">test_match</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if the hash matches&quot;&quot;&quot;</span>
+
+        <span class="n">string</span> <span class="o">=</span> <span class="s">&#39;string to be hashed&#39;</span>
+        <span class="n">known_hash</span> <span class="o">=</span> <span class="s">&#39;bc24010c31dc2b7f21c08ab9ff3a53a1f91756ce67e67d4915d9ae6cabe839881a5ead7ecc2fdbc848c1a31a7fae1dea23e7d9b20a6ead78f82b156c44df1a0e&#39;</span>
+        <span class="n">result</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">string</span><span class="p">)</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertEqual</span><span class="p">(</span><span class="n">result</span><span class="p">,</span> <span class="n">known_hash</span><span class="p">)</span>
+
+</div></div>
+<span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
+    <span class="n">do_main</span><span class="p">()</span>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="../../index.html">py_data_helper 0.0.1 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Qevo.
+      Last updated on 31 Aug 2015.
+    </div>
+  </body>
+</html>

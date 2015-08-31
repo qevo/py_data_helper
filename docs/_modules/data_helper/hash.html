@@ -1,0 +1,165 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
+  "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    
+    <title>data_helper.hash &mdash; py_data_helper 0.0.1 documentation</title>
+    
+    <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
+    <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+    
+    <script type="text/javascript">
+      var DOCUMENTATION_OPTIONS = {
+        URL_ROOT:    '../../',
+        VERSION:     '0.0.1',
+        COLLAPSE_INDEX: false,
+        FILE_SUFFIX: '.html',
+        HAS_SOURCE:  true
+      };
+    </script>
+    <script type="text/javascript" src="../../_static/jquery.js"></script>
+    <script type="text/javascript" src="../../_static/underscore.js"></script>
+    <script type="text/javascript" src="../../_static/doctools.js"></script>
+    <link rel="top" title="py_data_helper 0.0.1 documentation" href="../../index.html" />
+    <link rel="up" title="Module code" href="../index.html" /> 
+  </head>
+  <body role="document">
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="../../index.html">py_data_helper 0.0.1 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+      </ul>
+    </div>  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          <div class="body" role="main">
+            
+  <h1>Source code for data_helper.hash</h1><div class="highlight"><pre>
+<span class="sd">&quot;&quot;&quot;Data hashing helper.</span>
+
+<span class="sd">This module provides regular expressions wrapper functions to streamline common use cases.</span>
+
+<span class="sd">&quot;&quot;&quot;</span>
+
+<span class="kn">import</span> <span class="nn">hashlib</span>
+
+
+<div class="viewcode-block" id="md5"><a class="viewcode-back" href="../../data_helper.hash.html#data_helper.hash.md5">[docs]</a><span class="k">def</span> <span class="nf">md5</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the MD5 hash.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (str): Data to be hashed.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: Hexadecimal hash string.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">md5</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+</div>
+<div class="viewcode-block" id="sha1"><a class="viewcode-back" href="../../data_helper.hash.html#data_helper.hash.sha1">[docs]</a><span class="k">def</span> <span class="nf">sha1</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the SHA1 hash.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (str): Data to be hashed.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: Hexadecimal hash string.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha1</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+</div>
+<div class="viewcode-block" id="sha224"><a class="viewcode-back" href="../../data_helper.hash.html#data_helper.hash.sha224">[docs]</a><span class="k">def</span> <span class="nf">sha224</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the SHA224 hash.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (str): Data to be hashed.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: Hexadecimal hash string.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha224</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+</div>
+<div class="viewcode-block" id="sha256"><a class="viewcode-back" href="../../data_helper.hash.html#data_helper.hash.sha256">[docs]</a><span class="k">def</span> <span class="nf">sha256</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the SHA256 hash.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (str): Data to be hashed.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: Hexadecimal hash string.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha256</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+</div>
+<div class="viewcode-block" id="sha384"><a class="viewcode-back" href="../../data_helper.hash.html#data_helper.hash.sha384">[docs]</a><span class="k">def</span> <span class="nf">sha384</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the SHA384 hash.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (str): Data to be hashed.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: Hexadecimal hash string.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha384</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span>
+
+</div>
+<div class="viewcode-block" id="sha512"><a class="viewcode-back" href="../../data_helper.hash.html#data_helper.hash.sha512">[docs]</a><span class="k">def</span> <span class="nf">sha512</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Return the SHA512 hash.</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        data (str): Data to be hashed.</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        str: Hexadecimal hash string.</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="n">hashlib</span><span class="o">.</span><span class="n">sha512</span><span class="p">(</span><span class="n">data</span><span class="p">)</span><span class="o">.</span><span class="n">hexdigest</span><span class="p">()</span></div>
+</pre></div>
+
+          </div>
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<div id="searchbox" style="display: none" role="search">
+  <h3>Quick search</h3>
+    <form class="search" action="../../search.html" method="get">
+      <input type="text" name="q" />
+      <input type="submit" value="Go" />
+      <input type="hidden" name="check_keywords" value="yes" />
+      <input type="hidden" name="area" value="default" />
+    </form>
+    <p class="searchtip" style="font-size: 90%">
+    Enter search terms or a module, class or function name.
+    </p>
+</div>
+<script type="text/javascript">$('#searchbox').show(0);</script>
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="related" role="navigation" aria-label="related navigation">
+      <h3>Navigation</h3>
+      <ul>
+        <li class="nav-item nav-item-0"><a href="../../index.html">py_data_helper 0.0.1 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
+      </ul>
+    </div>
+    <div class="footer" role="contentinfo">
+        &copy; Copyright 2015, Qevo.
+      Last updated on 31 Aug 2015.
+    </div>
+  </body>
+</html>
