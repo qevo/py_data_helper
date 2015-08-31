@@ -43,6 +43,7 @@
   <h1>Source code for tests.check</h1><div class="highlight"><pre>
 <span class="sd">&quot;&quot;&quot;Tests for the data_helper.check module&quot;&quot;&quot;</span>
 
+<span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">unittest</span>
 <span class="kn">from</span> <span class="nn">BaseTest</span> <span class="kn">import</span> <span class="n">BaseTestWrapper</span><span class="p">,</span> <span class="n">do_main</span>
 
 
@@ -137,8 +138,13 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
 
 </div></div>
+<div class="viewcode-block" id="run_mod_tests"><a class="viewcode-back" href="../../tests.check.html#tests.check.run_mod_tests">[docs]</a><span class="k">def</span> <span class="nf">run_mod_tests</span><span class="p">():</span>
+    <span class="n">do_main</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="n">__name__</span><span class="p">])</span>
+</div>
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">do_main</span><span class="p">()</span>
+    <span class="n">do_main</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="n">__name__</span><span class="p">])</span>
+<span class="k">else</span><span class="p">:</span>
+    <span class="n">suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">defaultTestLoader</span><span class="o">.</span><span class="n">suiteClass</span>
 </pre></div>
 
           </div>

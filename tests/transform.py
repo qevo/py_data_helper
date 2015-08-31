@@ -1,5 +1,6 @@
 """Tests for the data_helper.transform module"""
 
+import sys, unittest
 from BaseTest import BaseTestWrapper, do_main
 
 
@@ -31,5 +32,10 @@ class CamelcaseToUnderscoreTestCase(BaseTestWrapper.BaseTest):
         self.assertEqual(result, string)
 
 
+def run_mod_tests():
+    do_main(sys.modules[__name__])
+
 if __name__ == '__main__':
-    do_main()
+    do_main(sys.modules[__name__])
+else:
+    suite = unittest.defaultTestLoader.suiteClass

@@ -1,5 +1,6 @@
 """Tests for the data_helper.hash module"""
 
+import sys, unittest
 from BaseTest import BaseTestWrapper, do_main
 
 
@@ -75,5 +76,10 @@ class Sha512TestCase(BaseTestWrapper.BaseTest):
         self.assertEqual(result, known_hash)
 
 
+def run_mod_tests():
+    do_main(sys.modules[__name__])
+
 if __name__ == '__main__':
-    do_main()
+    do_main(sys.modules[__name__])
+else:
+    suite = unittest.defaultTestLoader.suiteClass

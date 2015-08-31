@@ -1,7 +1,7 @@
 """Tests for the data_helper.parse module"""
 
+import sys, unittest
 from re import IGNORECASE
-
 from BaseTest import BaseTestWrapper, do_main
 
 class StrSplitSizeTestCase(BaseTestWrapper.BaseTest):
@@ -121,5 +121,10 @@ class ListFilterTestCase(BaseTestWrapper.BaseTest):
         self.assertListEqual(result, ['1234567890', '123 Fake St.'])
 
 
+def run_mod_tests():
+    do_main(sys.modules[__name__])
+
 if __name__ == '__main__':
-    do_main()
+    do_main(sys.modules[__name__])
+else:
+    suite = unittest.defaultTestLoader.suiteClass

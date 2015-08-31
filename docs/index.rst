@@ -10,7 +10,6 @@ Welcome to data_helper's documentation!
     sphinx.conf
     sphinx.makefile
     package.setup
-    index
 
 Install
 -------

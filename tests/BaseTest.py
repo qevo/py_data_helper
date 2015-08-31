@@ -52,7 +52,7 @@ def get_default_args(f):
     return dict(zip(args[-len(defaults):], defaults))
 
 
-def do_main():
+def do_main(*args, **kwargs):
     """run unittest.main()"""
 
-    unittest.main()
+    unittest.main(*args, **kwargs)
