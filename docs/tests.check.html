@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>tests.check module &mdash; py_data_helper 0.0.1 documentation</title>
+    <title>tests.check module &mdash; py_data_helper 0.0.2 documentation</title>
     
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.0.1',
+        VERSION:     '0.0.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,10 +23,10 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="py_data_helper 0.0.1 documentation" href="index.html" />
+    <link rel="top" title="py_data_helper 0.0.2 documentation" href="index.html" />
     <link rel="up" title="tests package" href="tests.html" />
     <link rel="next" title="tests.hash module" href="tests.hash.html" />
-    <link rel="prev" title="tests.BaseTest module" href="tests.BaseTest.html" /> 
+    <link rel="prev" title="tests.SuiteHandler module" href="tests.SuiteHandler.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -36,9 +36,9 @@
           <a href="tests.hash.html" title="tests.hash module"
              accesskey="N">next</a></li>
         <li class="right" >
-          <a href="tests.BaseTest.html" title="tests.BaseTest module"
+          <a href="tests.SuiteHandler.html" title="tests.SuiteHandler module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">py_data_helper 0.0.1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">py_data_helper 0.0.2 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="tests.html" accesskey="U">tests package</a> &raquo;</li> 
       </ul>
     </div>  
@@ -66,6 +66,130 @@
 <dt id="tests.check.HasWhitespaceTestCase.test_space">
 <code class="descname">test_space</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#HasWhitespaceTestCase.test_space"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.HasWhitespaceTestCase.test_space" title="Permalink to this definition">¶</a></dt>
 <dd><p>Test if whitespace is detected</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tests.check.IsBoolTestCase">
+<em class="property">class </em><code class="descclassname">tests.check.</code><code class="descname">IsBoolTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsBoolTestCase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsBoolTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">tests.BaseTest.BaseTest</span></code></p>
+<p>check.is_bool() test cases</p>
+<dl class="method">
+<dt id="tests.check.IsBoolTestCase.test_bool">
+<code class="descname">test_bool</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsBoolTestCase.test_bool"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsBoolTestCase.test_bool" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if a bool is True</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.check.IsBoolTestCase.test_list">
+<code class="descname">test_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsBoolTestCase.test_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsBoolTestCase.test_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if a list is False</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.check.IsBoolTestCase.test_number">
+<code class="descname">test_number</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsBoolTestCase.test_number"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsBoolTestCase.test_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if a number is False</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.check.IsBoolTestCase.test_string">
+<code class="descname">test_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsBoolTestCase.test_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsBoolTestCase.test_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if string is False</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tests.check.IsIntNegTestCase">
+<em class="property">class </em><code class="descclassname">tests.check.</code><code class="descname">IsIntNegTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsIntNegTestCase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsIntNegTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">tests.BaseTest.BaseTest</span></code></p>
+<p>check.is_int_pos() test cases</p>
+<dl class="method">
+<dt id="tests.check.IsIntNegTestCase.test_negative_int">
+<code class="descname">test_negative_int</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsIntNegTestCase.test_negative_int"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsIntNegTestCase.test_negative_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if a negative int is detected</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.check.IsIntNegTestCase.test_positive_int">
+<code class="descname">test_positive_int</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsIntNegTestCase.test_positive_int"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsIntNegTestCase.test_positive_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if a positive int is detected</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.check.IsIntNegTestCase.test_string">
+<code class="descname">test_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsIntNegTestCase.test_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsIntNegTestCase.test_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if string is False</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.check.IsIntNegTestCase.test_zero">
+<code class="descname">test_zero</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsIntNegTestCase.test_zero"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsIntNegTestCase.test_zero" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if zero is detected</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tests.check.IsIntNotNegTestCase">
+<em class="property">class </em><code class="descclassname">tests.check.</code><code class="descname">IsIntNotNegTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsIntNotNegTestCase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsIntNotNegTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">tests.BaseTest.BaseTest</span></code></p>
+<p>check.is_int_not_neg() test cases</p>
+<dl class="method">
+<dt id="tests.check.IsIntNotNegTestCase.test_negative_int">
+<code class="descname">test_negative_int</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsIntNotNegTestCase.test_negative_int"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsIntNotNegTestCase.test_negative_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if a negative int is detected</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.check.IsIntNotNegTestCase.test_positive_int">
+<code class="descname">test_positive_int</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsIntNotNegTestCase.test_positive_int"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsIntNotNegTestCase.test_positive_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if a positive int is detected</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.check.IsIntNotNegTestCase.test_string">
+<code class="descname">test_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsIntNotNegTestCase.test_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsIntNotNegTestCase.test_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if string is False</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.check.IsIntNotNegTestCase.test_zero">
+<code class="descname">test_zero</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsIntNotNegTestCase.test_zero"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsIntNotNegTestCase.test_zero" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if zero is detected</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tests.check.IsIntPosTestCase">
+<em class="property">class </em><code class="descclassname">tests.check.</code><code class="descname">IsIntPosTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsIntPosTestCase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsIntPosTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">tests.BaseTest.BaseTest</span></code></p>
+<p>check.is_int_pos() test cases</p>
+<dl class="method">
+<dt id="tests.check.IsIntPosTestCase.test_negative_int">
+<code class="descname">test_negative_int</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsIntPosTestCase.test_negative_int"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsIntPosTestCase.test_negative_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if a negative int is detected</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.check.IsIntPosTestCase.test_positive_int">
+<code class="descname">test_positive_int</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsIntPosTestCase.test_positive_int"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsIntPosTestCase.test_positive_int" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if a positive int is detected</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.check.IsIntPosTestCase.test_string">
+<code class="descname">test_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsIntPosTestCase.test_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsIntPosTestCase.test_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if string is False</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.check.IsIntPosTestCase.test_zero">
+<code class="descname">test_zero</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsIntPosTestCase.test_zero"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsIntPosTestCase.test_zero" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if zero is detected</p>
 </dd></dl>
 
 </dd></dl>
@@ -121,10 +245,72 @@
 </dd></dl>
 
 <dl class="class">
+<dt id="tests.check.IsStrEmptyTestCase">
+<em class="property">class </em><code class="descclassname">tests.check.</code><code class="descname">IsStrEmptyTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsStrEmptyTestCase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsStrEmptyTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">tests.BaseTest.BaseTest</span></code></p>
+<p>check.is_str_empty() test cases</p>
+<dl class="method">
+<dt id="tests.check.IsStrEmptyTestCase.test_empty_string">
+<code class="descname">test_empty_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsStrEmptyTestCase.test_empty_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsStrEmptyTestCase.test_empty_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if an empty string is True</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.check.IsStrEmptyTestCase.test_list">
+<code class="descname">test_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsStrEmptyTestCase.test_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsStrEmptyTestCase.test_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if a list is False</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.check.IsStrEmptyTestCase.test_number">
+<code class="descname">test_number</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsStrEmptyTestCase.test_number"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsStrEmptyTestCase.test_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if a number is False</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.check.IsStrEmptyTestCase.test_string">
+<code class="descname">test_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsStrEmptyTestCase.test_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsStrEmptyTestCase.test_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if non empty string is False</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
+<dt id="tests.check.IsStrNotEmptyTestCase">
+<em class="property">class </em><code class="descclassname">tests.check.</code><code class="descname">IsStrNotEmptyTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsStrNotEmptyTestCase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsStrNotEmptyTestCase" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">tests.BaseTest.BaseTest</span></code></p>
+<p>check.is_str_not_empty() test cases</p>
+<dl class="method">
+<dt id="tests.check.IsStrNotEmptyTestCase.test_empty_string">
+<code class="descname">test_empty_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsStrNotEmptyTestCase.test_empty_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsStrNotEmptyTestCase.test_empty_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if an empty string is False</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.check.IsStrNotEmptyTestCase.test_list">
+<code class="descname">test_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsStrNotEmptyTestCase.test_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsStrNotEmptyTestCase.test_list" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if a list is False</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.check.IsStrNotEmptyTestCase.test_number">
+<code class="descname">test_number</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsStrNotEmptyTestCase.test_number"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsStrNotEmptyTestCase.test_number" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if a number is False</p>
+</dd></dl>
+
+<dl class="method">
+<dt id="tests.check.IsStrNotEmptyTestCase.test_string">
+<code class="descname">test_string</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsStrNotEmptyTestCase.test_string"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsStrNotEmptyTestCase.test_string" title="Permalink to this definition">¶</a></dt>
+<dd><p>Test if non empty string is True</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="class">
 <dt id="tests.check.IsStrTestCase">
 <em class="property">class </em><code class="descclassname">tests.check.</code><code class="descname">IsStrTestCase</code><span class="sig-paren">(</span><em>methodName='runTest'</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsStrTestCase"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsStrTestCase" title="Permalink to this definition">¶</a></dt>
 <dd><p>Bases: <code class="xref py py-class docutils literal"><span class="pre">tests.BaseTest.BaseTest</span></code></p>
-<p>check.is_int() test cases</p>
+<p>check.is_str() test cases</p>
 <dl class="method">
 <dt id="tests.check.IsStrTestCase.test_list">
 <code class="descname">test_list</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#IsStrTestCase.test_list"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.IsStrTestCase.test_list" title="Permalink to this definition">¶</a></dt>
@@ -145,11 +331,6 @@
 
 </dd></dl>
 
-<dl class="function">
-<dt id="tests.check.run_mod_tests">
-<code class="descclassname">tests.check.</code><code class="descname">run_mod_tests</code><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="reference internal" href="_modules/tests/check.html#run_mod_tests"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#tests.check.run_mod_tests" title="Permalink to this definition">¶</a></dt>
-<dd></dd></dl>
-
 </div>
 
 
@@ -159,8 +340,8 @@
       <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
         <div class="sphinxsidebarwrapper">
   <h4>Previous topic</h4>
-  <p class="topless"><a href="tests.BaseTest.html"
-                        title="previous chapter">tests.BaseTest module</a></p>
+  <p class="topless"><a href="tests.SuiteHandler.html"
+                        title="previous chapter">tests.SuiteHandler module</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="tests.hash.html"
                         title="next chapter">tests.hash module</a></p>
@@ -195,15 +376,15 @@
           <a href="tests.hash.html" title="tests.hash module"
              >next</a></li>
         <li class="right" >
-          <a href="tests.BaseTest.html" title="tests.BaseTest module"
+          <a href="tests.SuiteHandler.html" title="tests.SuiteHandler module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">py_data_helper 0.0.1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">py_data_helper 0.0.2 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="tests.html" >tests package</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, Qevo.
-      Last updated on 31 Aug 2015.
+      Last updated on 02 Sep 2015.
     </div>
   </body>
 </html>

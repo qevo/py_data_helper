@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>tests.check &mdash; py_data_helper 0.0.1 documentation</title>
+    <title>tests.check &mdash; py_data_helper 0.0.2 documentation</title>
     
     <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.0.1',
+        VERSION:     '0.0.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,15 +23,16 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="py_data_helper 0.0.1 documentation" href="../../index.html" />
-    <link rel="up" title="Module code" href="../index.html" /> 
+    <link rel="top" title="py_data_helper 0.0.2 documentation" href="../../index.html" />
+    <link rel="up" title="tests" href="../tests.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="nav-item nav-item-0"><a href="../../index.html">py_data_helper 0.0.1 documentation</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">py_data_helper 0.0.2 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../tests.html" accesskey="U">tests</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -44,32 +45,112 @@
 <span class="sd">&quot;&quot;&quot;Tests for the data_helper.check module&quot;&quot;&quot;</span>
 
 <span class="kn">import</span> <span class="nn">sys</span><span class="o">,</span> <span class="nn">unittest</span>
-<span class="kn">from</span> <span class="nn">BaseTest</span> <span class="kn">import</span> <span class="n">BaseTestWrapper</span><span class="p">,</span> <span class="n">do_main</span>
+<span class="kn">from</span> <span class="nn">BaseTest</span> <span class="kn">import</span> <span class="n">BaseTestWrapper</span>
 
+<div class="viewcode-block" id="IsBoolTestCase"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsBoolTestCase">[docs]</a><span class="k">class</span> <span class="nc">IsBoolTestCase</span><span class="p">(</span><span class="n">BaseTestWrapper</span><span class="o">.</span><span class="n">BaseTest</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;check.is_bool() test cases&quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="HasWhitespaceTestCase"><a class="viewcode-back" href="../../tests.check.html#tests.check.HasWhitespaceTestCase">[docs]</a><span class="k">class</span> <span class="nc">HasWhitespaceTestCase</span><span class="p">(</span><span class="n">BaseTestWrapper</span><span class="o">.</span><span class="n">BaseTest</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;check.has_whitespace() test cases&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="IsBoolTestCase.test_string"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsBoolTestCase.test_string">[docs]</a>    <span class="k">def</span> <span class="nf">test_string</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if string is False&quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="HasWhitespaceTestCase.test_space"><a class="viewcode-back" href="../../tests.check.html#tests.check.HasWhitespaceTestCase.test_space">[docs]</a>    <span class="k">def</span> <span class="nf">test_space</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Test if whitespace is detected&quot;&quot;&quot;</span>
-
-        <span class="n">l</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="s">&#39;hello world&#39;</span><span class="p">,</span>
-            <span class="s">&#39;  &#39;</span><span class="p">,</span>
-            <span class="s">&#39; space&#39;</span>
-        <span class="p">]</span>
-        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">s</span><span class="p">))</span>
+        <span class="n">x</span> <span class="o">=</span> <span class="s">&#39;y&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
 </div>
-<div class="viewcode-block" id="HasWhitespaceTestCase.test_no_space"><a class="viewcode-back" href="../../tests.check.html#tests.check.HasWhitespaceTestCase.test_no_space">[docs]</a>    <span class="k">def</span> <span class="nf">test_no_space</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Test if no whitespace is detected&quot;&quot;&quot;</span>
-        <span class="n">l</span> <span class="o">=</span> <span class="p">[</span>
-            <span class="s">&#39;hello&#39;</span><span class="p">,</span>
-            <span class="s">&#39;&#39;</span><span class="p">,</span>
-            <span class="s">&#39;none&#39;</span>
-        <span class="p">]</span>
-        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
-            <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">s</span><span class="p">))</span>
+<div class="viewcode-block" id="IsBoolTestCase.test_number"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsBoolTestCase.test_number">[docs]</a>    <span class="k">def</span> <span class="nf">test_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if a number is False&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">12345</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="IsBoolTestCase.test_list"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsBoolTestCase.test_list">[docs]</a>    <span class="k">def</span> <span class="nf">test_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if a list is False&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="IsBoolTestCase.test_bool"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsBoolTestCase.test_bool">[docs]</a>    <span class="k">def</span> <span class="nf">test_bool</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if a bool is True&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="bp">True</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+
+</div></div>
+<div class="viewcode-block" id="IsStrTestCase"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsStrTestCase">[docs]</a><span class="k">class</span> <span class="nc">IsStrTestCase</span><span class="p">(</span><span class="n">BaseTestWrapper</span><span class="o">.</span><span class="n">BaseTest</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;check.is_str() test cases&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="IsStrTestCase.test_string"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsStrTestCase.test_string">[docs]</a>    <span class="k">def</span> <span class="nf">test_string</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if string is True&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="s">&#39;y&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="IsStrTestCase.test_number"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsStrTestCase.test_number">[docs]</a>    <span class="k">def</span> <span class="nf">test_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if a number is False&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">12345</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="IsStrTestCase.test_list"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsStrTestCase.test_list">[docs]</a>    <span class="k">def</span> <span class="nf">test_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if a list is False&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+
+</div></div>
+<div class="viewcode-block" id="IsStrEmptyTestCase"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsStrEmptyTestCase">[docs]</a><span class="k">class</span> <span class="nc">IsStrEmptyTestCase</span><span class="p">(</span><span class="n">BaseTestWrapper</span><span class="o">.</span><span class="n">BaseTest</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;check.is_str_empty() test cases&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="IsStrEmptyTestCase.test_empty_string"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsStrEmptyTestCase.test_empty_string">[docs]</a>    <span class="k">def</span> <span class="nf">test_empty_string</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if an empty string is True&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="IsStrEmptyTestCase.test_string"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsStrEmptyTestCase.test_string">[docs]</a>    <span class="k">def</span> <span class="nf">test_string</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if non empty string is False&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="s">&#39;y&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="IsStrEmptyTestCase.test_number"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsStrEmptyTestCase.test_number">[docs]</a>    <span class="k">def</span> <span class="nf">test_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if a number is False&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">12345</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="IsStrEmptyTestCase.test_list"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsStrEmptyTestCase.test_list">[docs]</a>    <span class="k">def</span> <span class="nf">test_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if a list is False&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+
+</div></div>
+<div class="viewcode-block" id="IsStrNotEmptyTestCase"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsStrNotEmptyTestCase">[docs]</a><span class="k">class</span> <span class="nc">IsStrNotEmptyTestCase</span><span class="p">(</span><span class="n">BaseTestWrapper</span><span class="o">.</span><span class="n">BaseTest</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;check.is_str_not_empty() test cases&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="IsStrNotEmptyTestCase.test_empty_string"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsStrNotEmptyTestCase.test_empty_string">[docs]</a>    <span class="k">def</span> <span class="nf">test_empty_string</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if an empty string is False&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="s">&#39;&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="IsStrNotEmptyTestCase.test_string"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsStrNotEmptyTestCase.test_string">[docs]</a>    <span class="k">def</span> <span class="nf">test_string</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if non empty string is True&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="s">&#39;y&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="IsStrNotEmptyTestCase.test_number"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsStrNotEmptyTestCase.test_number">[docs]</a>    <span class="k">def</span> <span class="nf">test_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if a number is False&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">12345</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="IsStrNotEmptyTestCase.test_list"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsStrNotEmptyTestCase.test_list">[docs]</a>    <span class="k">def</span> <span class="nf">test_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if a list is False&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
 
 </div></div>
 <div class="viewcode-block" id="IsIntTestCase"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsIntTestCase">[docs]</a><span class="k">class</span> <span class="nc">IsIntTestCase</span><span class="p">(</span><span class="n">BaseTestWrapper</span><span class="o">.</span><span class="n">BaseTest</span><span class="p">):</span>
@@ -88,6 +169,90 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
 </div>
 <div class="viewcode-block" id="IsIntTestCase.test_negative_int"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsIntTestCase.test_negative_int">[docs]</a>    <span class="k">def</span> <span class="nf">test_negative_int</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if a negative int is detected&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">12345</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+
+</div></div>
+<div class="viewcode-block" id="IsIntNotNegTestCase"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsIntNotNegTestCase">[docs]</a><span class="k">class</span> <span class="nc">IsIntNotNegTestCase</span><span class="p">(</span><span class="n">BaseTestWrapper</span><span class="o">.</span><span class="n">BaseTest</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;check.is_int_not_neg() test cases&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="IsIntNotNegTestCase.test_string"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsIntNotNegTestCase.test_string">[docs]</a>    <span class="k">def</span> <span class="nf">test_string</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if string is False&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="s">&#39;y&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="IsIntNotNegTestCase.test_positive_int"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsIntNotNegTestCase.test_positive_int">[docs]</a>    <span class="k">def</span> <span class="nf">test_positive_int</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if a positive int is detected&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">12345</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="IsIntNotNegTestCase.test_zero"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsIntNotNegTestCase.test_zero">[docs]</a>    <span class="k">def</span> <span class="nf">test_zero</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if zero is detected&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="IsIntNotNegTestCase.test_negative_int"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsIntNotNegTestCase.test_negative_int">[docs]</a>    <span class="k">def</span> <span class="nf">test_negative_int</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if a negative int is detected&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">12345</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+
+</div></div>
+<div class="viewcode-block" id="IsIntPosTestCase"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsIntPosTestCase">[docs]</a><span class="k">class</span> <span class="nc">IsIntPosTestCase</span><span class="p">(</span><span class="n">BaseTestWrapper</span><span class="o">.</span><span class="n">BaseTest</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;check.is_int_pos() test cases&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="IsIntPosTestCase.test_string"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsIntPosTestCase.test_string">[docs]</a>    <span class="k">def</span> <span class="nf">test_string</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if string is False&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="s">&#39;y&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="IsIntPosTestCase.test_positive_int"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsIntPosTestCase.test_positive_int">[docs]</a>    <span class="k">def</span> <span class="nf">test_positive_int</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if a positive int is detected&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">12345</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="IsIntPosTestCase.test_zero"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsIntPosTestCase.test_zero">[docs]</a>    <span class="k">def</span> <span class="nf">test_zero</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if zero is detected&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="IsIntPosTestCase.test_negative_int"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsIntPosTestCase.test_negative_int">[docs]</a>    <span class="k">def</span> <span class="nf">test_negative_int</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if a negative int is detected&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">12345</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+
+</div></div>
+<div class="viewcode-block" id="IsIntNegTestCase"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsIntNegTestCase">[docs]</a><span class="k">class</span> <span class="nc">IsIntNegTestCase</span><span class="p">(</span><span class="n">BaseTestWrapper</span><span class="o">.</span><span class="n">BaseTest</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;check.is_int_pos() test cases&quot;&quot;&quot;</span>
+
+<div class="viewcode-block" id="IsIntNegTestCase.test_string"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsIntNegTestCase.test_string">[docs]</a>    <span class="k">def</span> <span class="nf">test_string</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if string is False&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="s">&#39;y&#39;</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="IsIntNegTestCase.test_positive_int"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsIntNegTestCase.test_positive_int">[docs]</a>    <span class="k">def</span> <span class="nf">test_positive_int</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if a positive int is detected&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">12345</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="IsIntNegTestCase.test_zero"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsIntNegTestCase.test_zero">[docs]</a>    <span class="k">def</span> <span class="nf">test_zero</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if zero is detected&quot;&quot;&quot;</span>
+
+        <span class="n">x</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+</div>
+<div class="viewcode-block" id="IsIntNegTestCase.test_negative_int"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsIntNegTestCase.test_negative_int">[docs]</a>    <span class="k">def</span> <span class="nf">test_negative_int</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
         <span class="sd">&quot;&quot;&quot;Test if a negative int is detected&quot;&quot;&quot;</span>
 
         <span class="n">x</span> <span class="o">=</span> <span class="o">-</span><span class="mi">12345</span>
@@ -116,35 +281,36 @@
         <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
 
 </div></div>
-<div class="viewcode-block" id="IsStrTestCase"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsStrTestCase">[docs]</a><span class="k">class</span> <span class="nc">IsStrTestCase</span><span class="p">(</span><span class="n">BaseTestWrapper</span><span class="o">.</span><span class="n">BaseTest</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;check.is_int() test cases&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="HasWhitespaceTestCase"><a class="viewcode-back" href="../../tests.check.html#tests.check.HasWhitespaceTestCase">[docs]</a><span class="k">class</span> <span class="nc">HasWhitespaceTestCase</span><span class="p">(</span><span class="n">BaseTestWrapper</span><span class="o">.</span><span class="n">BaseTest</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;check.has_whitespace() test cases&quot;&quot;&quot;</span>
 
-<div class="viewcode-block" id="IsStrTestCase.test_string"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsStrTestCase.test_string">[docs]</a>    <span class="k">def</span> <span class="nf">test_string</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Test if string is True&quot;&quot;&quot;</span>
+<div class="viewcode-block" id="HasWhitespaceTestCase.test_space"><a class="viewcode-back" href="../../tests.check.html#tests.check.HasWhitespaceTestCase.test_space">[docs]</a>    <span class="k">def</span> <span class="nf">test_space</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if whitespace is detected&quot;&quot;&quot;</span>
 
-        <span class="n">x</span> <span class="o">=</span> <span class="s">&#39;y&#39;</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s">&#39;hello world&#39;</span><span class="p">,</span>
+            <span class="s">&#39;  &#39;</span><span class="p">,</span>
+            <span class="s">&#39; space&#39;</span>
+        <span class="p">]</span>
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">assertTrue</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">s</span><span class="p">))</span>
 </div>
-<div class="viewcode-block" id="IsStrTestCase.test_number"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsStrTestCase.test_number">[docs]</a>    <span class="k">def</span> <span class="nf">test_number</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Test if a number is False&quot;&quot;&quot;</span>
-
-        <span class="n">x</span> <span class="o">=</span> <span class="mi">12345</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
-</div>
-<div class="viewcode-block" id="IsStrTestCase.test_list"><a class="viewcode-back" href="../../tests.check.html#tests.check.IsStrTestCase.test_list">[docs]</a>    <span class="k">def</span> <span class="nf">test_list</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="sd">&quot;&quot;&quot;Test if a list is False&quot;&quot;&quot;</span>
-
-        <span class="n">x</span> <span class="o">=</span> <span class="p">[]</span>
-        <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">x</span><span class="p">))</span>
+<div class="viewcode-block" id="HasWhitespaceTestCase.test_no_space"><a class="viewcode-back" href="../../tests.check.html#tests.check.HasWhitespaceTestCase.test_no_space">[docs]</a>    <span class="k">def</span> <span class="nf">test_no_space</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="sd">&quot;&quot;&quot;Test if no whitespace is detected&quot;&quot;&quot;</span>
+        <span class="n">l</span> <span class="o">=</span> <span class="p">[</span>
+            <span class="s">&#39;hello&#39;</span><span class="p">,</span>
+            <span class="s">&#39;&#39;</span><span class="p">,</span>
+            <span class="s">&#39;none&#39;</span>
+        <span class="p">]</span>
+        <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="n">l</span><span class="p">:</span>
+            <span class="bp">self</span><span class="o">.</span><span class="n">assertFalse</span><span class="p">(</span><span class="bp">self</span><span class="o">.</span><span class="n">_bt</span><span class="p">[</span><span class="s">&#39;func&#39;</span><span class="p">](</span><span class="n">s</span><span class="p">))</span>
 
 </div></div>
-<div class="viewcode-block" id="run_mod_tests"><a class="viewcode-back" href="../../tests.check.html#tests.check.run_mod_tests">[docs]</a><span class="k">def</span> <span class="nf">run_mod_tests</span><span class="p">():</span>
-    <span class="n">do_main</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="n">__name__</span><span class="p">])</span>
-</div>
 <span class="k">if</span> <span class="n">__name__</span> <span class="o">==</span> <span class="s">&#39;__main__&#39;</span><span class="p">:</span>
-    <span class="n">do_main</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="n">__name__</span><span class="p">])</span>
+    <span class="n">unittest</span><span class="o">.</span><span class="n">main</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="n">__name__</span><span class="p">])</span>
 <span class="k">else</span><span class="p">:</span>
-    <span class="n">suite</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">defaultTestLoader</span><span class="o">.</span><span class="n">suiteClass</span>
+    <span class="n">loader</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">TestLoader</span><span class="p">()</span>
+    <span class="n">suite</span> <span class="o">=</span> <span class="n">loader</span><span class="o">.</span><span class="n">loadTestsFromModule</span><span class="p">(</span><span class="n">sys</span><span class="o">.</span><span class="n">modules</span><span class="p">[</span><span class="n">__name__</span><span class="p">])</span>
 </pre></div>
 
           </div>
@@ -172,13 +338,14 @@
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="nav-item nav-item-0"><a href="../../index.html">py_data_helper 0.0.1 documentation</a> &raquo;</li>
-          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="../../index.html">py_data_helper 0.0.2 documentation</a> &raquo;</li>
+          <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li>
+          <li class="nav-item nav-item-2"><a href="../tests.html" >tests</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, Qevo.
-      Last updated on 31 Aug 2015.
+      Last updated on 02 Sep 2015.
     </div>
   </body>
 </html>

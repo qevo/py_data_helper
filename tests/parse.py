@@ -2,7 +2,7 @@
 
 import sys, unittest
 from re import IGNORECASE
-from BaseTest import BaseTestWrapper, do_main
+from BaseTest import BaseTestWrapper
 
 class StrSplitSizeTestCase(BaseTestWrapper.BaseTest):
     """parse.str_split_size() test cases"""
@@ -121,10 +121,8 @@ class ListFilterTestCase(BaseTestWrapper.BaseTest):
         self.assertListEqual(result, ['1234567890', '123 Fake St.'])
 
 
-def run_mod_tests():
-    do_main(sys.modules[__name__])
-
 if __name__ == '__main__':
-    do_main(sys.modules[__name__])
+    unittest.main(sys.modules[__name__])
 else:
-    suite = unittest.defaultTestLoader.suiteClass
+    loader = unittest.TestLoader()
+    suite = loader.loadTestsFromModule(sys.modules[__name__])

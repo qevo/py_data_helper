@@ -1,4 +1,4 @@
-"""Data hashing helper.
+"""Data hashing helper
 
 This module provides regular expressions wrapper functions to streamline common use cases.
 
@@ -7,8 +7,21 @@ This module provides regular expressions wrapper functions to streamline common 
 import hashlib
 
 
+def py(*args):
+    """Wrap the python hash() function
+
+    Args:
+        args (str): Object to be hashed. See :py:func:`hash`
+
+    Returns:
+        int: Hash value
+
+    """
+    return hash(*args)
+
+
 def md5(data):
-    """Return the MD5 hash.
+    """Return the MD5 hash
 
     Args:
         data (str): Data to be hashed.
@@ -21,7 +34,7 @@ def md5(data):
 
 
 def sha1(data):
-    """Return the SHA1 hash.
+    """Return the SHA1 hash
 
     Args:
         data (str): Data to be hashed.
@@ -34,7 +47,7 @@ def sha1(data):
 
 
 def sha224(data):
-    """Return the SHA224 hash.
+    """Return the SHA224 hash
 
     Args:
         data (str): Data to be hashed.
@@ -47,7 +60,7 @@ def sha224(data):
 
 
 def sha256(data):
-    """Return the SHA256 hash.
+    """Return the SHA256 hash
 
     Args:
         data (str): Data to be hashed.
@@ -60,7 +73,7 @@ def sha256(data):
 
 
 def sha384(data):
-    """Return the SHA384 hash.
+    """Return the SHA384 hash
 
     Args:
         data (str): Data to be hashed.
@@ -73,7 +86,7 @@ def sha384(data):
 
 
 def sha512(data):
-    """Return the SHA512 hash.
+    """Return the SHA512 hash
 
     Args:
         data (str): Data to be hashed.

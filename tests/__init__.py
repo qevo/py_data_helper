@@ -1,12 +1,14 @@
-"""Tests package"""
+"""data_helper tests package"""
 
-from BaseTest import BaseTestWrapper, do_main
-import check, hash, parse, regex, transform
+from SuiteHandler import SuiteHandler
 
 
-# if __name__ == '__main__':
-#     check.run_mod_tests()
-#     hash.run_mod_tests()
-#     parse.run_mod_tests()
-#     regex.run_mod_tests()
-#     transform.run_mod_tests()
+def run(sh, *args):
+    sh.run_suite(*args)
+
+
+sh = SuiteHandler()
+
+if __name__ == "__main__":
+    run(sh)
+    print sh.result

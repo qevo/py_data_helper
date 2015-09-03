@@ -51,8 +51,3 @@ def get_default_args(f):
     args, varargs, keywords, defaults = inspect.getargspec(f)
     return dict(zip(args[-len(defaults):], defaults))
 
-
-def do_main(*args, **kwargs):
-    """run unittest.main()"""
-
-    unittest.main(*args, **kwargs)

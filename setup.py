@@ -12,13 +12,13 @@ def read(fname):
 
 config = {}
 config["name"]             = "py_data_helper"
-config["version"]          = "0.0.1"
+config["version"]          = "0.0.2"
 config["author"]           = "Qevo"
 config["author_email"]     = "qevo@qevonics.net"
 config["description"]      = ("String search, identification, analysis, and manipulation tools.")
 config["license"]          = "MIT"
 config["keywords"]         = "string hash regex helper"
-config["url"]              = "https://github.com/qevo/" + config["name"]
+config["url"]              = "https://github.com/qevo/py_data_helper"
 config["packages"]         = ["data_helper"]
 config["install_requires"] = []
 config["long_description"] = read('README.md')

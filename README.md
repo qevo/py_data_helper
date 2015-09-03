@@ -1,5 +1,5 @@
 # data_helper
-version 0.0.1
+version 0.0.2
 
 This helper module is a simple set of functions that make some string related activities easier.
 

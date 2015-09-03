@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>data_helper.hash &mdash; py_data_helper 0.0.1 documentation</title>
+    <title>data_helper.hash &mdash; py_data_helper 0.0.2 documentation</title>
     
     <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.0.1',
+        VERSION:     '0.0.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,14 +23,14 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="py_data_helper 0.0.1 documentation" href="../../index.html" />
+    <link rel="top" title="py_data_helper 0.0.2 documentation" href="../../index.html" />
     <link rel="up" title="Module code" href="../index.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="nav-item nav-item-0"><a href="../../index.html">py_data_helper 0.0.1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">py_data_helper 0.0.2 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
       </ul>
     </div>  
@@ -41,7 +41,7 @@
           <div class="body" role="main">
             
   <h1>Source code for data_helper.hash</h1><div class="highlight"><pre>
-<span class="sd">&quot;&quot;&quot;Data hashing helper.</span>
+<span class="sd">&quot;&quot;&quot;Data hashing helper</span>
 
 <span class="sd">This module provides regular expressions wrapper functions to streamline common use cases.</span>
 
@@ -50,8 +50,21 @@
 <span class="kn">import</span> <span class="nn">hashlib</span>
 
 
+<div class="viewcode-block" id="py"><a class="viewcode-back" href="../../data_helper.hash.html#data_helper.hash.py">[docs]</a><span class="k">def</span> <span class="nf">py</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">):</span>
+    <span class="sd">&quot;&quot;&quot;Wrap the python hash() function</span>
+
+<span class="sd">    Args:</span>
+<span class="sd">        args (str): Object to be hashed. See :py:func:`hash`</span>
+
+<span class="sd">    Returns:</span>
+<span class="sd">        int: Hash value</span>
+
+<span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="nb">hash</span><span class="p">(</span><span class="o">*</span><span class="n">args</span><span class="p">)</span>
+
+</div>
 <div class="viewcode-block" id="md5"><a class="viewcode-back" href="../../data_helper.hash.html#data_helper.hash.md5">[docs]</a><span class="k">def</span> <span class="nf">md5</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Return the MD5 hash.</span>
+    <span class="sd">&quot;&quot;&quot;Return the MD5 hash</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        data (str): Data to be hashed.</span>
@@ -64,7 +77,7 @@
 
 </div>
 <div class="viewcode-block" id="sha1"><a class="viewcode-back" href="../../data_helper.hash.html#data_helper.hash.sha1">[docs]</a><span class="k">def</span> <span class="nf">sha1</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Return the SHA1 hash.</span>
+    <span class="sd">&quot;&quot;&quot;Return the SHA1 hash</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        data (str): Data to be hashed.</span>
@@ -77,7 +90,7 @@
 
 </div>
 <div class="viewcode-block" id="sha224"><a class="viewcode-back" href="../../data_helper.hash.html#data_helper.hash.sha224">[docs]</a><span class="k">def</span> <span class="nf">sha224</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Return the SHA224 hash.</span>
+    <span class="sd">&quot;&quot;&quot;Return the SHA224 hash</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        data (str): Data to be hashed.</span>
@@ -90,7 +103,7 @@
 
 </div>
 <div class="viewcode-block" id="sha256"><a class="viewcode-back" href="../../data_helper.hash.html#data_helper.hash.sha256">[docs]</a><span class="k">def</span> <span class="nf">sha256</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Return the SHA256 hash.</span>
+    <span class="sd">&quot;&quot;&quot;Return the SHA256 hash</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        data (str): Data to be hashed.</span>
@@ -103,7 +116,7 @@
 
 </div>
 <div class="viewcode-block" id="sha384"><a class="viewcode-back" href="../../data_helper.hash.html#data_helper.hash.sha384">[docs]</a><span class="k">def</span> <span class="nf">sha384</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Return the SHA384 hash.</span>
+    <span class="sd">&quot;&quot;&quot;Return the SHA384 hash</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        data (str): Data to be hashed.</span>
@@ -116,7 +129,7 @@
 
 </div>
 <div class="viewcode-block" id="sha512"><a class="viewcode-back" href="../../data_helper.hash.html#data_helper.hash.sha512">[docs]</a><span class="k">def</span> <span class="nf">sha512</span><span class="p">(</span><span class="n">data</span><span class="p">):</span>
-    <span class="sd">&quot;&quot;&quot;Return the SHA512 hash.</span>
+    <span class="sd">&quot;&quot;&quot;Return the SHA512 hash</span>
 
 <span class="sd">    Args:</span>
 <span class="sd">        data (str): Data to be hashed.</span>
@@ -153,13 +166,13 @@
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="nav-item nav-item-0"><a href="../../index.html">py_data_helper 0.0.1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">py_data_helper 0.0.2 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, Qevo.
-      Last updated on 31 Aug 2015.
+      Last updated on 02 Sep 2015.
     </div>
   </body>
 </html>

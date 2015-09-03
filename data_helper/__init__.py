@@ -1,13 +1,9 @@
-"""Provides data related wrapper functions to streamline common use cases.
-
-Functions are directly exposed as well as via logical groupings.
-
-"""
+"""Provides data related wrapper functions to streamline common use cases"""
 
 import check
-from check import is_int, is_list, is_str, has_whitespace
+from check import is_bool, is_str, is_str_empty, is_str_not_empty, is_int, is_int_not_neg, is_int_pos, is_int_neg, is_list, has_whitespace
 import hash
-from hash import md5, sha1, sha224, sha256, sha384, sha512
+from hash import py, md5, sha1, sha224, sha256, sha384, sha512
 import parse
 from parse import list_filter, str_split_caps, str_split_size
 import regex

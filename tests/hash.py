@@ -1,7 +1,19 @@
 """Tests for the data_helper.hash module"""
 
 import sys, unittest
-from BaseTest import BaseTestWrapper, do_main
+from BaseTest import BaseTestWrapper
+
+
+class PyTestCase(BaseTestWrapper.BaseTest):
+    """hash.py() test cases"""
+
+    def test_match(self):
+        """Test if the hash matches"""
+
+        string = 'string to be hashed'
+        known_hash = -2513295840610095741
+        result = self._bt['func'](string)
+        self.assertEqual(result, known_hash)
 
 
 class Md5TestCase(BaseTestWrapper.BaseTest):
@@ -76,10 +88,8 @@ class Sha512TestCase(BaseTestWrapper.BaseTest):
         self.assertEqual(result, known_hash)
 
 
-def run_mod_tests():
-    do_main(sys.modules[__name__])
-
 if __name__ == '__main__':
-    do_main(sys.modules[__name__])
+    unittest.main(sys.modules[__name__])
 else:
-    suite = unittest.defaultTestLoader.suiteClass
+    loader = unittest.TestLoader()
+    suite = loader.loadTestsFromModule(sys.modules[__name__])

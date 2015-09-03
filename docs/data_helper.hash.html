@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>data_helper.hash module &mdash; py_data_helper 0.0.1 documentation</title>
+    <title>data_helper.hash module &mdash; py_data_helper 0.0.2 documentation</title>
     
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.0.1',
+        VERSION:     '0.0.2',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="py_data_helper 0.0.1 documentation" href="index.html" />
+    <link rel="top" title="py_data_helper 0.0.2 documentation" href="index.html" />
     <link rel="up" title="data_helper package" href="data_helper.html" />
     <link rel="next" title="data_helper.parse module" href="data_helper.parse.html" />
     <link rel="prev" title="data_helper.check module" href="data_helper.check.html" /> 
@@ -38,7 +38,7 @@
         <li class="right" >
           <a href="data_helper.check.html" title="data_helper.check module"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">py_data_helper 0.0.1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">py_data_helper 0.0.2 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="data_helper.html" accesskey="U">data_helper package</a> &raquo;</li> 
       </ul>
     </div>  
@@ -50,12 +50,12 @@
             
   <div class="section" id="module-data_helper.hash">
 <span id="data-helper-hash-module"></span><h1>data_helper.hash module<a class="headerlink" href="#module-data_helper.hash" title="Permalink to this headline">¶</a></h1>
-<p>Data hashing helper.</p>
+<p>Data hashing helper</p>
 <p>This module provides regular expressions wrapper functions to streamline common use cases.</p>
 <dl class="function">
 <dt id="data_helper.hash.md5">
 <code class="descclassname">data_helper.hash.</code><code class="descname">md5</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_helper/hash.html#md5"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data_helper.hash.md5" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the MD5 hash.</p>
+<dd><p>Return the MD5 hash</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -71,9 +71,27 @@
 </dd></dl>
 
 <dl class="function">
+<dt id="data_helper.hash.py">
+<code class="descclassname">data_helper.hash.</code><code class="descname">py</code><span class="sig-paren">(</span><em>*args</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_helper/hash.html#py"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data_helper.hash.py" title="Permalink to this definition">¶</a></dt>
+<dd><p>Wrap the python hash() function</p>
+<table class="docutils field-list" frame="void" rules="none">
+<col class="field-name" />
+<col class="field-body" />
+<tbody valign="top">
+<tr class="field-odd field"><th class="field-name">Parameters:</th><td class="field-body"><strong>args</strong> (<a class="reference external" href="https://docs.python.org/2.7/library/functions.html#str" title="(in Python v2.7)"><em>str</em></a>) &#8211; Object to be hashed. See <a class="reference external" href="https://docs.python.org/2.7/library/functions.html#hash" title="(in Python v2.7)"><code class="xref py py-func docutils literal"><span class="pre">hash()</span></code></a></td>
+</tr>
+<tr class="field-even field"><th class="field-name">Returns:</th><td class="field-body">Hash value</td>
+</tr>
+<tr class="field-odd field"><th class="field-name">Return type:</th><td class="field-body"><a class="reference external" href="https://docs.python.org/2.7/library/functions.html#int" title="(in Python v2.7)">int</a></td>
+</tr>
+</tbody>
+</table>
+</dd></dl>
+
+<dl class="function">
 <dt id="data_helper.hash.sha1">
 <code class="descclassname">data_helper.hash.</code><code class="descname">sha1</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_helper/hash.html#sha1"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data_helper.hash.sha1" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the SHA1 hash.</p>
+<dd><p>Return the SHA1 hash</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -91,7 +109,7 @@
 <dl class="function">
 <dt id="data_helper.hash.sha224">
 <code class="descclassname">data_helper.hash.</code><code class="descname">sha224</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_helper/hash.html#sha224"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data_helper.hash.sha224" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the SHA224 hash.</p>
+<dd><p>Return the SHA224 hash</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -109,7 +127,7 @@
 <dl class="function">
 <dt id="data_helper.hash.sha256">
 <code class="descclassname">data_helper.hash.</code><code class="descname">sha256</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_helper/hash.html#sha256"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data_helper.hash.sha256" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the SHA256 hash.</p>
+<dd><p>Return the SHA256 hash</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -127,7 +145,7 @@
 <dl class="function">
 <dt id="data_helper.hash.sha384">
 <code class="descclassname">data_helper.hash.</code><code class="descname">sha384</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_helper/hash.html#sha384"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data_helper.hash.sha384" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the SHA384 hash.</p>
+<dd><p>Return the SHA384 hash</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -145,7 +163,7 @@
 <dl class="function">
 <dt id="data_helper.hash.sha512">
 <code class="descclassname">data_helper.hash.</code><code class="descname">sha512</code><span class="sig-paren">(</span><em>data</em><span class="sig-paren">)</span><a class="reference internal" href="_modules/data_helper/hash.html#sha512"><span class="viewcode-link">[source]</span></a><a class="headerlink" href="#data_helper.hash.sha512" title="Permalink to this definition">¶</a></dt>
-<dd><p>Return the SHA512 hash.</p>
+<dd><p>Return the SHA512 hash</p>
 <table class="docutils field-list" frame="void" rules="none">
 <col class="field-name" />
 <col class="field-body" />
@@ -207,13 +225,13 @@
         <li class="right" >
           <a href="data_helper.check.html" title="data_helper.check module"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">py_data_helper 0.0.1 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="index.html">py_data_helper 0.0.2 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="data_helper.html" >data_helper package</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, Qevo.
-      Last updated on 31 Aug 2015.
+      Last updated on 02 Sep 2015.
     </div>
   </body>
 </html>

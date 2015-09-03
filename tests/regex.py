@@ -1,7 +1,7 @@
 """Tests for the data_helper.regex module"""
 
 import sys, unittest
-from BaseTest import BaseTestWrapper, do_main
+from BaseTest import BaseTestWrapper
 
 
 class WildcardReTestCase(BaseTestWrapper.BaseTest):
@@ -36,10 +36,8 @@ class WildcardReTestCase(BaseTestWrapper.BaseTest):
         self.assertEqual(result, 'foo\\?bar')
 
 
-def run_mod_tests():
-    do_main(sys.modules[__name__])
-
 if __name__ == '__main__':
-    do_main(sys.modules[__name__])
+    unittest.main(sys.modules[__name__])
 else:
-    suite = unittest.defaultTestLoader.suiteClass
+    loader = unittest.TestLoader()
+    suite = loader.loadTestsFromModule(sys.modules[__name__])

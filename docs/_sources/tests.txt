@@ -7,6 +7,7 @@ Submodules
 .. toctree::
 
    tests.BaseTest
+   tests.SuiteHandler
    tests.check
    tests.hash
    tests.parse
