@@ -47,8 +47,10 @@ API Documentation
 
 Notes
 -----
-* This project uses :doc:`Sphinx <sphinx>` and `Pandoc <http://pandoc.org/>`_ for its documentation generation.
+* This project uses :doc:`Sphinx <sphinx>` and :doc:`Pandoc <pandoc>` for its documentation generation.
     .. toctree::
+        :maxdepth: 0
+
         sphinx.conf
         sphinx.makefile
         package.setup

@@ -22,7 +22,7 @@ Why Sphinx is Used
 How Sphinx is Used
 ------------------
 #. Create valid docstrings for code
-#. :mod:`Install Sphinx <sphinx:tutorial>`
+#. `Install Sphinx <http://sphinx-doc.org/latest/install.html>`_
 #. Create a docs folder
 #. Navigate to the docs folder
 #. Put a copy of the modified :doc:`Sphinx Makefile <sphinx.makefile>`
