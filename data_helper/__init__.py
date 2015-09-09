@@ -1,4 +1,4 @@
-"""Provides data related wrapper functions to streamline common use cases"""
+"""String related wrapper functions to streamline common use cases"""
 
 import check
 from check import is_bool, is_str, is_str_empty, is_str_not_empty, is_int, is_int_not_neg, is_int_pos, is_int_neg, is_list, has_whitespace

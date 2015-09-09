@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>tests.SuiteHandler &mdash; py_data_helper 0.0.2 documentation</title>
+    <title>tests.SuiteHandler &mdash; data_helper 0.2.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.0.2',
+        VERSION:     '0.2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,14 +23,14 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="py_data_helper 0.0.2 documentation" href="../../index.html" />
+    <link rel="top" title="data_helper 0.2.0 documentation" href="../../index.html" />
     <link rel="up" title="tests" href="../tests.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="nav-item nav-item-0"><a href="../../index.html">py_data_helper 0.0.2 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">data_helper 0.2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="../tests.html" accesskey="U">tests</a> &raquo;</li> 
       </ul>
@@ -43,21 +43,14 @@
             
   <h1>Source code for tests.SuiteHandler</h1><div class="highlight"><pre>
 <span class="kn">import</span> <span class="nn">unittest</span>
-<span class="kn">import</span> <span class="nn">check</span><span class="o">,</span> <span class="nn">hash</span><span class="o">,</span> <span class="nn">parse</span><span class="o">,</span> <span class="nn">regex</span><span class="o">,</span> <span class="nn">transform</span>
 
 
 <div class="viewcode-block" id="SuiteHandler"><a class="viewcode-back" href="../../tests.SuiteHandler.html#tests.SuiteHandler.SuiteHandler">[docs]</a><span class="k">class</span> <span class="nc">SuiteHandler</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
     <span class="sd">&quot;&quot;&quot;unittest.TestSuite handler&quot;&quot;&quot;</span>
 
-    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">__init__</span><span class="p">(</span><span class="bp">self</span><span class="p">,</span> <span class="n">mod_suites</span><span class="p">):</span>
 
-        <span class="bp">self</span><span class="o">.</span><span class="n">mod_suites</span> <span class="o">=</span> <span class="p">{</span>
-            <span class="s">&quot;check&quot;</span><span class="p">:</span> <span class="n">check</span><span class="o">.</span><span class="n">suite</span><span class="p">,</span>
-            <span class="s">&quot;hash&quot;</span><span class="p">:</span> <span class="nb">hash</span><span class="o">.</span><span class="n">suite</span><span class="p">,</span>
-            <span class="s">&quot;parse&quot;</span><span class="p">:</span> <span class="n">parse</span><span class="o">.</span><span class="n">suite</span><span class="p">,</span>
-            <span class="s">&quot;regex&quot;</span><span class="p">:</span> <span class="n">regex</span><span class="o">.</span><span class="n">suite</span><span class="p">,</span>
-            <span class="s">&quot;transform&quot;</span><span class="p">:</span> <span class="n">transform</span><span class="o">.</span><span class="n">suite</span>
-        <span class="p">}</span>
+        <span class="bp">self</span><span class="o">.</span><span class="n">mod_suites</span> <span class="o">=</span> <span class="n">mod_suites</span>
         <span class="bp">self</span><span class="o">.</span> <span class="n">mod_suites</span><span class="p">[</span><span class="s">&quot;_&quot;</span><span class="p">]</span> <span class="o">=</span> <span class="bp">self</span><span class="o">.</span><span class="n">combine_suites</span><span class="p">()</span>
         <span class="bp">self</span><span class="o">.</span><span class="n">result</span> <span class="o">=</span> <span class="n">unittest</span><span class="o">.</span><span class="n">result</span><span class="o">.</span><span class="n">TestResult</span><span class="p">()</span>
 
@@ -145,14 +138,14 @@
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="nav-item nav-item-0"><a href="../../index.html">py_data_helper 0.0.2 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">data_helper 0.2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li>
           <li class="nav-item nav-item-2"><a href="../tests.html" >tests</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, Qevo.
-      Last updated on 02 Sep 2015.
+      Last updated on 09 Sep 2015.
     </div>
   </body>
 </html>

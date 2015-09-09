@@ -1,28 +1,21 @@
-Sphinx
+Pandoc
 ======
 
-.. toctree::
-    :hidden:
-
-    sphinx.conf
-    sphinx.makefile
-
-What Sphinx Is
+What Pandoc Is
 --------------
-Sphinx is a Python application for generating documentation. It uses reStructuredText as its markup language.
+Pandoc is a Linux application for converting documents from one markup format to another.
 
-Visit the `Sphinx <http://sphinx-doc.org/>`_ website `<http://sphinx-doc.org/>`_
+Visit the `Pandoc <http://pandoc.org/>`_ website `<http://pandoc.org/>`_
 
 
-Why Sphinx is Used
+Why Pandoc is Used
 ------------------
-* To generate API documentation from source code docstrings.
-* To generate HTML pages from the reStructuredText files.
+* To convert Markdown files to reStructuredText.
 
-How Sphinx is Used
+How Pandoc is Used
 ------------------
-#. Create valid docstrings for code
-#. :mod:`Install Sphinx <sphinx:tutorial>`
+#. Create the Markdown file(s)
+#. `Install Pandoc <http://pandoc.org/installing.html>`_
 #. Create a docs folder
 #. Navigate to the docs folder
 #. Put a copy of the modified :doc:`Sphinx Makefile <sphinx.makefile>`
@@ -32,6 +25,7 @@ How Sphinx is Used
     * This is the main page of the documentation and must include a table of contents
     * The file extension is required for non-code based files to work with the modified :doc:`Sphinx Makefile <sphinx.makefile>`
 
+#. Link to the converted files within the index file
 #. Generate the documenation
     .. code-block:: bash
 

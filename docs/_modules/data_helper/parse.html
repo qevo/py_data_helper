@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>data_helper.parse &mdash; py_data_helper 0.0.2 documentation</title>
+    <title>data_helper.parse &mdash; data_helper 0.2.0 documentation</title>
     
     <link rel="stylesheet" href="../../_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    '../../',
-        VERSION:     '0.0.2',
+        VERSION:     '0.2.0',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,14 +23,14 @@
     <script type="text/javascript" src="../../_static/jquery.js"></script>
     <script type="text/javascript" src="../../_static/underscore.js"></script>
     <script type="text/javascript" src="../../_static/doctools.js"></script>
-    <link rel="top" title="py_data_helper 0.0.2 documentation" href="../../index.html" />
+    <link rel="top" title="data_helper 0.2.0 documentation" href="../../index.html" />
     <link rel="up" title="Module code" href="../index.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="nav-item nav-item-0"><a href="../../index.html">py_data_helper 0.0.2 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">data_helper 0.2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" accesskey="U">Module code</a> &raquo;</li> 
       </ul>
     </div>  
@@ -44,6 +44,7 @@
 <span class="sd">&quot;&quot;&quot;String parse wrapper functions to streamline common use cases&quot;&quot;&quot;</span>
 
 <span class="kn">import</span> <span class="nn">re</span>
+<span class="kn">from</span> <span class="nn">check</span> <span class="kn">import</span> <span class="n">is_list</span><span class="p">,</span> <span class="n">is_str</span><span class="p">,</span> <span class="n">is_bool</span><span class="p">,</span> <span class="n">is_str_not_empty</span><span class="p">,</span> <span class="n">is_int_pos</span>
 
 
 <div class="viewcode-block" id="str_split_size"><a class="viewcode-back" href="../../data_helper.parse.html#data_helper.parse.str_split_size">[docs]</a><span class="k">def</span> <span class="nf">str_split_size</span><span class="p">(</span><span class="n">s</span><span class="p">,</span> <span class="n">n</span><span class="o">=</span><span class="bp">None</span><span class="p">):</span>
@@ -59,6 +60,10 @@
 <span class="sd">    &quot;&quot;&quot;</span>
     <span class="n">s</span> <span class="o">=</span> <span class="nb">str</span><span class="p">(</span><span class="n">s</span><span class="p">)</span>
     <span class="n">n</span> <span class="o">=</span> <span class="nb">int</span><span class="p">(</span><span class="n">n</span><span class="p">)</span> <span class="k">if</span> <span class="n">n</span> <span class="k">else</span> <span class="nb">int</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">)</span> <span class="o">/</span> <span class="mi">2</span><span class="p">)</span>
+
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">is_str_not_empty</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&quot;&#39;s&#39; must be a non empty string&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">is_int_pos</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> <span class="k">raise</span> <span class="ne">ValueError</span><span class="p">(</span><span class="s">&quot;&#39;n&#39; must be a positive integer&quot;</span><span class="p">)</span>
+
     <span class="k">return</span> <span class="p">[</span><span class="n">s</span><span class="p">[</span><span class="n">start</span><span class="p">:</span><span class="n">start</span> <span class="o">+</span> <span class="n">n</span><span class="p">]</span> <span class="k">for</span> <span class="n">start</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">s</span><span class="p">),</span> <span class="n">n</span><span class="p">)]</span>
 
 </div>
@@ -66,13 +71,16 @@
     <span class="sd">&quot;&quot;&quot;Split a string on capital letters</span>
 
 <span class="sd">    Args:</span>
-<span class="sd">        string (str): The string to be divided. Value type is converted to string.</span>
+<span class="sd">        s (str): The string to be divided. Value type is converted to string.</span>
 <span class="sd">        trim (bool): Remove whitespace. Defaults to True.</span>
 
 <span class="sd">    Returns:</span>
 <span class="sd">        list: List of strings, each starting with a capital letter, in the same order as they appear in the string.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">is_str</span><span class="p">(</span><span class="n">s</span><span class="p">):</span> <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s">&quot;&#39;s&#39; must be a string&quot;</span><span class="p">)</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">is_bool</span><span class="p">(</span><span class="n">trim</span><span class="p">):</span> <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s">&quot;&#39;trim&#39; must be True or False&quot;</span><span class="p">)</span>
+
     <span class="n">result</span> <span class="o">=</span> <span class="n">re</span><span class="o">.</span><span class="n">findall</span><span class="p">(</span><span class="s">&#39;[A-Z][^A-Z]*&#39;</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
     <span class="k">if</span> <span class="n">trim</span><span class="p">:</span>
         <span class="n">result_trim</span> <span class="o">=</span> <span class="p">[]</span>
@@ -94,19 +102,20 @@
 <span class="sd">        list: List of matching strings.</span>
 
 <span class="sd">    &quot;&quot;&quot;</span>
-    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span> <span class="o">==</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="k">if</span> <span class="n">is_list</span><span class="p">(</span><span class="n">pattern</span><span class="p">):</span>
         <span class="k">pass</span>
-    <span class="k">elif</span> <span class="nb">type</span><span class="p">(</span><span class="n">pattern</span><span class="p">)</span> <span class="o">==</span> <span class="nb">str</span><span class="p">:</span>
+    <span class="k">elif</span> <span class="n">is_str</span><span class="p">(</span><span class="n">pattern</span><span class="p">):</span>
         <span class="n">pattern</span> <span class="o">=</span> <span class="p">[</span><span class="n">pattern</span><span class="p">]</span>
     <span class="k">else</span><span class="p">:</span>
         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s">&quot;&#39;pattern&#39; must be a string or list of strings&quot;</span><span class="p">)</span>
 
-    <span class="k">if</span> <span class="nb">type</span><span class="p">(</span><span class="nb">iter</span><span class="p">)</span> <span class="o">!=</span> <span class="nb">list</span><span class="p">:</span>
+    <span class="k">if</span> <span class="ow">not</span> <span class="n">is_list</span><span class="p">(</span><span class="nb">iter</span><span class="p">):</span>
         <span class="k">raise</span> <span class="ne">TypeError</span><span class="p">(</span><span class="s">&quot;&#39;iter&#39; must be a list of strings&quot;</span><span class="p">)</span>
 
     <span class="n">re_filters</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">p</span> <span class="ow">in</span> <span class="n">pattern</span><span class="p">:</span>
         <span class="n">re_filters</span><span class="o">.</span><span class="n">append</span><span class="p">(</span><span class="n">re</span><span class="o">.</span><span class="n">compile</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">flags</span><span class="p">))</span>
+
     <span class="n">matches</span> <span class="o">=</span> <span class="p">[]</span>
     <span class="k">for</span> <span class="n">s</span> <span class="ow">in</span> <span class="nb">iter</span><span class="p">:</span>
         <span class="k">for</span> <span class="n">f</span> <span class="ow">in</span> <span class="n">re_filters</span><span class="p">:</span>
@@ -141,13 +150,13 @@
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
-        <li class="nav-item nav-item-0"><a href="../../index.html">py_data_helper 0.0.2 documentation</a> &raquo;</li>
+        <li class="nav-item nav-item-0"><a href="../../index.html">data_helper 0.2.0 documentation</a> &raquo;</li>
           <li class="nav-item nav-item-1"><a href="../index.html" >Module code</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, Qevo.
-      Last updated on 02 Sep 2015.
+      Last updated on 09 Sep 2015.
     </div>
   </body>
 </html>

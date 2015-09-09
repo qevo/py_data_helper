@@ -1,19 +1,12 @@
 import unittest
-import check, hash, parse, regex, transform
 
 
 class SuiteHandler(object):
     """unittest.TestSuite handler"""
 
-    def __init__(self):
+    def __init__(self, mod_suites):
 
-        self.mod_suites = {
-            "check": check.suite,
-            "hash": hash.suite,
-            "parse": parse.suite,
-            "regex": regex.suite,
-            "transform": transform.suite
-        }
+        self.mod_suites = mod_suites
         self. mod_suites["_"] = self.combine_suites()
         self.result = unittest.result.TestResult()
 

@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Sphinx &mdash; data_helper 0.2.0 documentation</title>
+    <title>Pandoc &mdash; data_helper 0.2.0 documentation</title>
     
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -24,19 +24,15 @@
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="data_helper 0.2.0 documentation" href="index.html" />
-    <link rel="next" title="Sphinx Conf" href="sphinx.conf.html" />
-    <link rel="prev" title="Change Log" href="changelog.html" /> 
+    <link rel="prev" title="Package Setup" href="package.setup.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="sphinx.conf.html" title="Sphinx Conf"
-             accesskey="N">next</a></li>
-        <li class="right" >
-          <a href="changelog.html" title="Change Log"
-             accesskey="P">previous</a> |</li>
+          <a href="package.setup.html" title="Package Setup"
+             accesskey="P">previous</a></li>
         <li class="nav-item nav-item-0"><a href="index.html">data_helper 0.2.0 documentation</a> &raquo;</li> 
       </ul>
     </div>  
@@ -46,28 +42,25 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="sphinx">
-<h1>Sphinx<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
+  <div class="section" id="pandoc">
+<h1>Pandoc<a class="headerlink" href="#pandoc" title="Permalink to this headline">¶</a></h1>
+<div class="section" id="what-pandoc-is">
+<h2>What Pandoc Is<a class="headerlink" href="#what-pandoc-is" title="Permalink to this headline">¶</a></h2>
+<p>Pandoc is a Linux application for converting documents from one markup format to another.</p>
+<p>Visit the <a class="reference external" href="http://pandoc.org/">Pandoc</a> website <a class="reference external" href="http://pandoc.org/">http://pandoc.org/</a></p>
 </div>
-<div class="section" id="what-sphinx-is">
-<h2>What Sphinx Is<a class="headerlink" href="#what-sphinx-is" title="Permalink to this headline">¶</a></h2>
-<p>Sphinx is a Python application for generating documentation. It uses reStructuredText as its markup language.</p>
-<p>Visit the <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a> website <a class="reference external" href="http://sphinx-doc.org/">http://sphinx-doc.org/</a></p>
-</div>
-<div class="section" id="why-sphinx-is-used">
-<h2>Why Sphinx is Used<a class="headerlink" href="#why-sphinx-is-used" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="why-pandoc-is-used">
+<h2>Why Pandoc is Used<a class="headerlink" href="#why-pandoc-is-used" title="Permalink to this headline">¶</a></h2>
 <ul class="simple">
-<li>To generate API documentation from source code docstrings.</li>
-<li>To generate HTML pages from the reStructuredText files.</li>
+<li>To convert Markdown files to reStructuredText.</li>
 </ul>
 </div>
-<div class="section" id="how-sphinx-is-used">
-<h2>How Sphinx is Used<a class="headerlink" href="#how-sphinx-is-used" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="how-pandoc-is-used">
+<h2>How Pandoc is Used<a class="headerlink" href="#how-pandoc-is-used" title="Permalink to this headline">¶</a></h2>
 <ol class="arabic">
-<li><p class="first">Create valid docstrings for code</p>
+<li><p class="first">Create the Markdown file(s)</p>
 </li>
-<li><p class="first"><code class="xref py py-mod docutils literal"><span class="pre">Install</span> <span class="pre">Sphinx</span></code></p>
+<li><p class="first"><a class="reference external" href="http://pandoc.org/installing.html">Install Pandoc</a></p>
 </li>
 <li><p class="first">Create a docs folder</p>
 </li>
@@ -84,6 +77,8 @@
 <li>The file extension is required for non-code based files to work with the modified <a class="reference internal" href="sphinx.makefile.html"><em>Sphinx Makefile</em></a></li>
 </ul>
 </div></blockquote>
+</li>
+<li><p class="first">Link to the converted files within the index file</p>
 </li>
 <li><dl class="first docutils">
 <dt>Generate the documenation</dt>
@@ -105,24 +100,21 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Sphinx</a><ul>
-<li><a class="reference internal" href="#what-sphinx-is">What Sphinx Is</a></li>
-<li><a class="reference internal" href="#why-sphinx-is-used">Why Sphinx is Used</a></li>
-<li><a class="reference internal" href="#how-sphinx-is-used">How Sphinx is Used</a></li>
+<li><a class="reference internal" href="#">Pandoc</a><ul>
+<li><a class="reference internal" href="#what-pandoc-is">What Pandoc Is</a></li>
+<li><a class="reference internal" href="#why-pandoc-is-used">Why Pandoc is Used</a></li>
+<li><a class="reference internal" href="#how-pandoc-is-used">How Pandoc is Used</a></li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="changelog.html"
-                        title="previous chapter">Change Log</a></p>
-  <h4>Next topic</h4>
-  <p class="topless"><a href="sphinx.conf.html"
-                        title="next chapter">Sphinx Conf</a></p>
+  <p class="topless"><a href="package.setup.html"
+                        title="previous chapter">Package Setup</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/sphinx.txt"
+      <li><a href="_sources/pandoc.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -147,11 +139,8 @@
       <h3>Navigation</h3>
       <ul>
         <li class="right" style="margin-right: 10px">
-          <a href="sphinx.conf.html" title="Sphinx Conf"
-             >next</a></li>
-        <li class="right" >
-          <a href="changelog.html" title="Change Log"
-             >previous</a> |</li>
+          <a href="package.setup.html" title="Package Setup"
+             >previous</a></li>
         <li class="nav-item nav-item-0"><a href="index.html">data_helper 0.2.0 documentation</a> &raquo;</li> 
       </ul>
     </div>

@@ -9,7 +9,7 @@ Sphinx
 
 What Sphinx Is
 --------------
-Sphinx is a python application for generating documentation. It uses reStructuredText as its markup language.
+Sphinx is a Python application for generating documentation. It uses reStructuredText as its markup language.
 
 Visit the `Sphinx <http://sphinx-doc.org/>`_ website `<http://sphinx-doc.org/>`_
 
@@ -22,7 +22,7 @@ Why Sphinx is Used
 How Sphinx is Used
 ------------------
 #. Create valid docstrings for code
-#. `Install sphinx <sphinx:install-sphinx>`_
+#. :mod:`Install Sphinx <sphinx:tutorial>`
 #. Create a docs folder
 #. Navigate to the docs folder
 #. Put a copy of the modified :doc:`Sphinx Makefile <sphinx.makefile>`

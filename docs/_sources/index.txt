@@ -6,10 +6,14 @@ Welcome to data_helper's documentation!
 
     data_helper
     tests
+    changelog
     sphinx
     sphinx.conf
     sphinx.makefile
     package.setup
+    pandoc
+
+This helper module is a simple set of functions that make some string related activities easier.
 
 Install
 -------
@@ -39,14 +43,16 @@ API Documentation
 .. toctree::
     data_helper
     tests
+    changelog
 
 Notes
 -----
-* This project uses :doc:`Sphinx <sphinx>` for its documentation generation.
+* This project uses :doc:`Sphinx <sphinx>` and `Pandoc <http://pandoc.org/>`_ for its documentation generation.
     .. toctree::
         sphinx.conf
         sphinx.makefile
         package.setup
+        pandoc
 
 License
 -------

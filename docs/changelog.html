@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Sphinx &mdash; data_helper 0.2.0 documentation</title>
+    <title>Change Log &mdash; data_helper 0.2.0 documentation</title>
     
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -25,7 +25,7 @@
     <script type="text/javascript" src="_static/doctools.js"></script>
     <link rel="top" title="data_helper 0.2.0 documentation" href="index.html" />
     <link rel="next" title="Sphinx Conf" href="sphinx.conf.html" />
-    <link rel="prev" title="Change Log" href="changelog.html" /> 
+    <link rel="prev" title="tests.transform module" href="tests.transform.html" /> 
   </head>
   <body role="document">
     <div class="related" role="navigation" aria-label="related navigation">
@@ -35,7 +35,7 @@
           <a href="sphinx.conf.html" title="Sphinx Conf"
              accesskey="N">next</a></li>
         <li class="right" >
-          <a href="changelog.html" title="Change Log"
+          <a href="tests.transform.html" title="tests.transform module"
              accesskey="P">previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">data_helper 0.2.0 documentation</a> &raquo;</li> 
       </ul>
@@ -46,54 +46,29 @@
         <div class="bodywrapper">
           <div class="body" role="main">
             
-  <div class="section" id="sphinx">
-<h1>Sphinx<a class="headerlink" href="#sphinx" title="Permalink to this headline">¶</a></h1>
-<div class="toctree-wrapper compound">
-</div>
-<div class="section" id="what-sphinx-is">
-<h2>What Sphinx Is<a class="headerlink" href="#what-sphinx-is" title="Permalink to this headline">¶</a></h2>
-<p>Sphinx is a Python application for generating documentation. It uses reStructuredText as its markup language.</p>
-<p>Visit the <a class="reference external" href="http://sphinx-doc.org/">Sphinx</a> website <a class="reference external" href="http://sphinx-doc.org/">http://sphinx-doc.org/</a></p>
-</div>
-<div class="section" id="why-sphinx-is-used">
-<h2>Why Sphinx is Used<a class="headerlink" href="#why-sphinx-is-used" title="Permalink to this headline">¶</a></h2>
+  <div class="section" id="change-log">
+<h1>Change Log<a class="headerlink" href="#change-log" title="Permalink to this headline">¶</a></h1>
+<p>All notable changes to this project will be documented in this file.
+This project adheres to <a class="reference external" href="http://semver.org/">Semantic Versioning</a>.</p>
+<div class="section" id="id1">
+<h2>[0.2.0] - 2015-09-09<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="added">
+<h3>Added<a class="headerlink" href="#added" title="Permalink to this headline">¶</a></h3>
 <ul class="simple">
-<li>To generate API documentation from source code docstrings.</li>
-<li>To generate HTML pages from the reStructuredText files.</li>
+<li>CHANGELOG.md</li>
+<li>LICENSE.md</li>
+<li>setup.cfg</li>
+<li>Importing from other modules within this same package.</li>
+<li>Function argument value checks and errors.</li>
 </ul>
 </div>
-<div class="section" id="how-sphinx-is-used">
-<h2>How Sphinx is Used<a class="headerlink" href="#how-sphinx-is-used" title="Permalink to this headline">¶</a></h2>
-<ol class="arabic">
-<li><p class="first">Create valid docstrings for code</p>
-</li>
-<li><p class="first"><code class="xref py py-mod docutils literal"><span class="pre">Install</span> <span class="pre">Sphinx</span></code></p>
-</li>
-<li><p class="first">Create a docs folder</p>
-</li>
-<li><p class="first">Navigate to the docs folder</p>
-</li>
-<li><p class="first">Put a copy of the modified <a class="reference internal" href="sphinx.makefile.html"><em>Sphinx Makefile</em></a></p>
-</li>
-<li><p class="first">Put a copy of the modified <a class="reference internal" href="sphinx.conf.html"><em>Sphinx Config</em></a> (conf.py)</p>
-</li>
-<li><p class="first">Create an index file: <em>index.rs_</em></p>
-<blockquote>
-<div><ul class="simple">
-<li>This is the main page of the documentation and must include a table of contents</li>
-<li>The file extension is required for non-code based files to work with the modified <a class="reference internal" href="sphinx.makefile.html"><em>Sphinx Makefile</em></a></li>
+<div class="section" id="changed">
+<h3>Changed<a class="headerlink" href="#changed" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li>Package name from <code class="docutils literal"><span class="pre">py_data_helper</span></code> to <code class="docutils literal"><span class="pre">data_helper</span></code></li>
+<li><code class="docutils literal"><span class="pre">tests</span></code> package command line output.</li>
 </ul>
-</div></blockquote>
-</li>
-<li><dl class="first docutils">
-<dt>Generate the documenation</dt>
-<dd><div class="first last highlight-bash"><div class="highlight"><pre>make html
-</pre></div>
 </div>
-</dd>
-</dl>
-</li>
-</ol>
 </div>
 </div>
 
@@ -105,24 +80,26 @@
         <div class="sphinxsidebarwrapper">
   <h3><a href="index.html">Table Of Contents</a></h3>
   <ul>
-<li><a class="reference internal" href="#">Sphinx</a><ul>
-<li><a class="reference internal" href="#what-sphinx-is">What Sphinx Is</a></li>
-<li><a class="reference internal" href="#why-sphinx-is-used">Why Sphinx is Used</a></li>
-<li><a class="reference internal" href="#how-sphinx-is-used">How Sphinx is Used</a></li>
+<li><a class="reference internal" href="#">Change Log</a><ul>
+<li><a class="reference internal" href="#id1">[0.2.0] - 2015-09-09</a><ul>
+<li><a class="reference internal" href="#added">Added</a></li>
+<li><a class="reference internal" href="#changed">Changed</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
 
   <h4>Previous topic</h4>
-  <p class="topless"><a href="changelog.html"
-                        title="previous chapter">Change Log</a></p>
+  <p class="topless"><a href="tests.transform.html"
+                        title="previous chapter">tests.transform module</a></p>
   <h4>Next topic</h4>
   <p class="topless"><a href="sphinx.conf.html"
                         title="next chapter">Sphinx Conf</a></p>
   <div role="note" aria-label="source link">
     <h3>This Page</h3>
     <ul class="this-page-menu">
-      <li><a href="_sources/sphinx.txt"
+      <li><a href="_sources/changelog.txt"
             rel="nofollow">Show Source</a></li>
     </ul>
    </div>
@@ -150,7 +127,7 @@
           <a href="sphinx.conf.html" title="Sphinx Conf"
              >next</a></li>
         <li class="right" >
-          <a href="changelog.html" title="Change Log"
+          <a href="tests.transform.html" title="tests.transform module"
              >previous</a> |</li>
         <li class="nav-item nav-item-0"><a href="index.html">data_helper 0.2.0 documentation</a> &raquo;</li> 
       </ul>

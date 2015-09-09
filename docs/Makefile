@@ -38,6 +38,9 @@ html:
 	@echo "find python packages and generate API documentation"
 	@find $(BUILDDIR)/.. -depth -name "__init__.py" -exec sh -c 'sphinx-apidoc -T -e -o $(BUILDDIR) "$${1%__init__.py}"' _ {} \; || true
 
+	@echo "convert markdown files"
+	@pandoc --from=markdown --to=rst --output=changelog.rst ../CHANGELOG.md
+
 	@echo "generate HTML documentation"
 	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)
 

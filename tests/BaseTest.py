@@ -28,14 +28,14 @@ class BaseTestWrapper(object):
 
         def setUp(self):
             """Setting up for the test"""
-
-            test_name = self.shortDescription()
-            print test_name
+            pass
+            # test_name = self.shortDescription()
+            # print test_name
 
         def tearDown(self):
             """Cleaning up after the test"""
-
-            print '...done'
+            pass
+            # print '...done'
 
 
 def get_default_args(f):

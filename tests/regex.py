@@ -36,8 +36,18 @@ class WildcardReTestCase(BaseTestWrapper.BaseTest):
         self.assertEqual(result, 'foo\\?bar')
 
 
+loader = unittest.TestLoader()
+suite = loader.loadTestsFromModule(sys.modules[__name__])
+
 if __name__ == '__main__':
-    unittest.main(sys.modules[__name__])
-else:
-    loader = unittest.TestLoader()
-    suite = loader.loadTestsFromModule(sys.modules[__name__])
+    result = unittest.result.TestResult()
+    suite.run(result)
+    print result
+    for f in result.failures:
+        for t in f:
+            print t
+        print ''
+    for e in result.errors:
+        for t in e:
+            print t
+        print ''

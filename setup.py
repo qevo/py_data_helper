@@ -11,8 +11,8 @@ def read(fname):
 
 
 config = {}
-config["name"]             = "py_data_helper"
-config["version"]          = "0.0.2"
+config["name"]             = "data_helper"
+config["version"]          = "0.2.0"
 config["author"]           = "Qevo"
 config["author_email"]     = "qevo@qevonics.net"
 config["description"]      = ("String search, identification, analysis, and manipulation tools.")
