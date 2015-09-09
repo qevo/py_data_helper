@@ -49,12 +49,11 @@ Notes
 -----
 * This project uses :doc:`Sphinx <sphinx>` and :doc:`Pandoc <pandoc>` for its documentation generation.
     .. toctree::
-        :maxdepth: 0
+        :includehidden:
 
         sphinx.conf
         sphinx.makefile
         package.setup
-        pandoc
 
 License
 -------
