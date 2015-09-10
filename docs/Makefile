@@ -21,33 +21,43 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(BUILDDIR)
 
 
 html:
+	@old_dir=`cd .; pwd`
+
+	@`cd $(BUILDDIR)`
+
+	@echo "remove docs from git index"
+	@git ls-files | xargs -I %s git rm --cache %s
+
 	@echo "remove any existing files"
 	@rm .buildinfo || true
-	@rm $(BUILDDIR)/*.html || true
-	@rm $(BUILDDIR)/*.inv || true
-	@rm $(BUILDDIR)/*.js || true
-	@rm $(BUILDDIR)/*.rst || true
-	@rm -r $(BUILDDIR)/doctrees || true
-	@rm -r $(BUILDDIR)/_modules || true
-	@rm -r $(BUILDDIR)/_sources || true
-	@rm -r $(BUILDDIR)/_static || true
+	@rm *.html || true
+	@rm *.inv || true
+	@rm *.js || true
+	@rm *.rst || true
+	@rm -r doctrees || true
+	@rm -r _modules || true
+	@rm -r _sources || true
+	@rm -r _static || true
 
 	@echo "find *.rs_ files and copy them as *.rst (used for static files)"
-	@find $(BUILDDIR) -depth -name "*.rs_" -exec sh -c 'cp "$$1" "$${1%.rs_}.rst"' _ {} \; || true
+	@find . -depth -name "*.rs_" -exec sh -c 'cp "$$1" "$${1%.rs_}.rst"' _ {} \; || true
 
 	@echo "find python packages and generate API documentation"
-	@find $(BUILDDIR)/.. -depth -name "__init__.py" -exec sh -c 'sphinx-apidoc -T -e -o $(BUILDDIR) "$${1%__init__.py}"' _ {} \; || true
+	@find .. -depth -name "__init__.py" -exec sh -c 'sphinx-apidoc -f -T -e -o . "$${1%__init__.py}"' _ {} \; || true
 
 	@echo "convert markdown files"
 	@pandoc --from=markdown --to=rst --output=changelog.rst ../CHANGELOG.md
 
 	@echo "generate HTML documentation"
-	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)
+	$(SPHINXBUILD) -b html $(ALLSPHINXOPTS) .
 
 	@echo "remove doctrees"
-	@rm -r $(BUILDDIR)/doctrees
+	@rm -r doctrees
+
+	@echo "add docs to git index"
+	@git add *
+
 	@echo
-	@echo
-	@old_dir=`cd .; pwd`
-	@echo "Build finished. The HTML page is in `cd $(BUILDDIR); pwd`."
+	@echo "Build finished. The HTML page is in `cd .; pwd`."
 	@`cd $$old_dir`
+	@echo

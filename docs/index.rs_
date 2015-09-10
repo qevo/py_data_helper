@@ -2,6 +2,7 @@ Welcome to data_helper's documentation!
 =======================================
 
 .. toctree::
+    :name: mastertoc
     :hidden:
 
     data_helper
@@ -40,20 +41,23 @@ Processing
 
 API Documentation
 -----------------
+.. important:: Read the :doc:`change log <changelog>`.
+
 .. toctree::
     data_helper
     tests
-    changelog
+
 
 Notes
 -----
 * This project uses :doc:`Sphinx <sphinx>` and :doc:`Pandoc <pandoc>` for its documentation generation.
     .. toctree::
-        :includehidden:
+        :titlesonly:
 
         sphinx.conf
         sphinx.makefile
         package.setup
+        pandoc
 
 License
 -------

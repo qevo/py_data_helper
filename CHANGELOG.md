@@ -2,6 +2,15 @@
 All notable changes to this project will be documented in this file.
 This project adheres to [Semantic Versioning](http://semver.org/).
 
+## [0.2.1] - 2015-09-10
+### Added
+  - Test run instructions in documentation examples.
+
+### Changed
+  - `sphinx-apidoc` command now forces the overwrite of files.
+  - Makefile structure changed to be more readable.
+  - Makefile now manages git index. This is needed to make the documentation generation process dynamic. 
+
 ## [0.2.0] - 2015-09-09
 ### Added
   - CHANGELOG.md

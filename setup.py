@@ -12,7 +12,7 @@ def read(fname):
 
 config = {}
 config["name"]             = "data_helper"
-config["version"]          = "0.2.0"
+config["version"]          = "0.2.1"
 config["author"]           = "Qevo"
 config["author_email"]     = "qevo@qevonics.net"
 config["description"]      = ("String search, identification, analysis, and manipulation tools.")

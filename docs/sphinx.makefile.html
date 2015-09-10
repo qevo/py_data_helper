@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Sphinx Makefile &mdash; data_helper 0.2.0 documentation</title>
+    <title>Sphinx Makefile &mdash; data_helper 0.2.1 documentation</title>
     
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.2.0',
+        VERSION:     '0.2.1',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="data_helper 0.2.0 documentation" href="index.html" />
+    <link rel="top" title="data_helper 0.2.1 documentation" href="index.html" />
     <link rel="next" title="Package Setup" href="package.setup.html" />
     <link rel="prev" title="Sphinx Conf" href="sphinx.conf.html" /> 
   </head>
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="sphinx.conf.html" title="Sphinx Conf"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">data_helper 0.2.0 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">data_helper 0.2.1 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -71,36 +71,46 @@ I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(BUILDDIR)
 
 
 html:
+        @old_dir=`cd .; pwd`
+
+        @`cd $(BUILDDIR)`
+
+        @echo &quot;remove docs from git index&quot;
+        @git ls-files | xargs -I %s git rm --cache %s
+
         @echo &quot;remove any existing files&quot;
         @rm .buildinfo || true
-        @rm $(BUILDDIR)/*.html || true
-        @rm $(BUILDDIR)/*.inv || true
-        @rm $(BUILDDIR)/*.js || true
-        @rm $(BUILDDIR)/*.rst || true
-        @rm -r $(BUILDDIR)/doctrees || true
-        @rm -r $(BUILDDIR)/_modules || true
-        @rm -r $(BUILDDIR)/_sources || true
-        @rm -r $(BUILDDIR)/_static || true
+        @rm *.html || true
+        @rm *.inv || true
+        @rm *.js || true
+        @rm *.rst || true
+        @rm -r doctrees || true
+        @rm -r _modules || true
+        @rm -r _sources || true
+        @rm -r _static || true
 
         @echo &quot;find *.rs_ files and copy them as *.rst (used for static files)&quot;
-        @find $(BUILDDIR) -depth -name &quot;*.rs_&quot; -exec sh -c &#39;cp &quot;$$1&quot; &quot;$${1%.rs_}.rst&quot;&#39; _ {} \; || true
+        @find . -depth -name &quot;*.rs_&quot; -exec sh -c &#39;cp &quot;$$1&quot; &quot;$${1%.rs_}.rst&quot;&#39; _ {} \; || true
 
         @echo &quot;find python packages and generate API documentation&quot;
-        @find $(BUILDDIR)/.. -depth -name &quot;__init__.py&quot; -exec sh -c &#39;sphinx-apidoc -T -e -o $(BUILDDIR) &quot;$${1%__init__.py}&quot;&#39; _ {} \; || true
+        @find .. -depth -name &quot;__init__.py&quot; -exec sh -c &#39;sphinx-apidoc -f -T -e -o . &quot;$${1%__init__.py}&quot;&#39; _ {} \; || true
 
         @echo &quot;convert markdown files&quot;
         @pandoc --from=markdown --to=rst --output=changelog.rst ../CHANGELOG.md
 
         @echo &quot;generate HTML documentation&quot;
-        $(SPHINXBUILD) -b html $(ALLSPHINXOPTS) $(BUILDDIR)
+        $(SPHINXBUILD) -b html $(ALLSPHINXOPTS) .
 
         @echo &quot;remove doctrees&quot;
-        @rm -r $(BUILDDIR)/doctrees
+        @rm -r doctrees
+
+        @echo &quot;add docs to git index&quot;
+        @git add *
+
         @echo
-        @echo
-        @old_dir=`cd .; pwd`
-        @echo &quot;Build finished. The HTML page is in `cd $(BUILDDIR); pwd`.&quot;
+        @echo &quot;Build finished. The HTML page is in `cd .; pwd`.&quot;
         @`cd $$old_dir`
+        @echo
 </pre></div>
 </div>
 </div>
@@ -150,12 +160,12 @@ html:
         <li class="right" >
           <a href="sphinx.conf.html" title="Sphinx Conf"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">data_helper 0.2.0 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">data_helper 0.2.1 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, Qevo.
-      Last updated on 09 Sep 2015.
+      Last updated on 10 Sep 2015.
     </div>
   </body>
 </html>

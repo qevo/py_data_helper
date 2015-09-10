@@ -1,4 +1,16 @@
-"""data_helper tests package"""
+"""data_helper tests package
+
+Example:
+    Run all tests from parent directory::
+
+        python -m tests
+
+    Run module test::
+
+        python -m tests <module>
+        python tests/<module.py>
+
+"""
 
 from SuiteHandler import SuiteHandler
 import check, hash, parse, regex, transform
