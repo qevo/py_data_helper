@@ -7,7 +7,7 @@ class SuiteHandler(object):
     def __init__(self, mod_suites):
 
         self.mod_suites = mod_suites
-        self. mod_suites["_"] = self.combine_suites()
+        self.mod_suites["_"] = self.combine_suites()
         self.result = unittest.result.TestResult()
 
 
