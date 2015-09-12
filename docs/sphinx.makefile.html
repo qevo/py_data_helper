@@ -6,7 +6,7 @@
   <head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
     
-    <title>Sphinx Makefile &mdash; data_helper 0.2.2 documentation</title>
+    <title>Sphinx Makefile &mdash; data_helper 0.2.3 documentation</title>
     
     <link rel="stylesheet" href="_static/classic.css" type="text/css" />
     <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
@@ -14,7 +14,7 @@
     <script type="text/javascript">
       var DOCUMENTATION_OPTIONS = {
         URL_ROOT:    './',
-        VERSION:     '0.2.2',
+        VERSION:     '0.2.3',
         COLLAPSE_INDEX: false,
         FILE_SUFFIX: '.html',
         HAS_SOURCE:  true
@@ -23,7 +23,7 @@
     <script type="text/javascript" src="_static/jquery.js"></script>
     <script type="text/javascript" src="_static/underscore.js"></script>
     <script type="text/javascript" src="_static/doctools.js"></script>
-    <link rel="top" title="data_helper 0.2.2 documentation" href="index.html" />
+    <link rel="top" title="data_helper 0.2.3 documentation" href="index.html" />
     <link rel="next" title="Package Setup" href="package.setup.html" />
     <link rel="prev" title="Sphinx Conf" href="sphinx.conf.html" /> 
   </head>
@@ -37,7 +37,7 @@
         <li class="right" >
           <a href="sphinx.conf.html" title="Sphinx Conf"
              accesskey="P">previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">data_helper 0.2.2 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">data_helper 0.2.3 documentation</a> &raquo;</li> 
       </ul>
     </div>  
 
@@ -52,10 +52,17 @@
 #
 
 # You can set these variables from the command line.
-SPHINXOPTS    =
+SPHINXOPTS        =
 SPHINXBUILD   = sphinx-build
-PAPER         =
-BUILDDIR      = .
+PAPER             =
+BUILDDIR          = .
+PKGDIR            = ..
+RSTDIR            = _rst
+
+buildDir = $(realpath $(BUILDDIR))
+pkgDir = $(realpath $(PKGDIR))
+rstDir = $(realpath $(RSTDIR))
+
 
 # User-friendly check for sphinx-build
 ifeq ($(shell which $(SPHINXBUILD) &gt;/dev/null 2&gt;&amp;1; echo $$?), 1)
@@ -63,20 +70,17 @@ $(error The &#39;$(SPHINXBUILD)&#39; command was not found. Make sure you have S
 endif
 
 # Internal variables.
-PAPEROPT_a4     = -D latex_paper_size=a4
+PAPEROPT_a4      = -D latex_paper_size=a4
 PAPEROPT_letter = -D latex_paper_size=letter
-ALLSPHINXOPTS   = -d $(BUILDDIR)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(BUILDDIR)
+ALLSPHINXOPTS   = -d $(buildDir)/doctrees $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(buildDir)
 # the i18n builder cannot share the environment and doctrees with the others
-I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(BUILDDIR)
+I18NSPHINXOPTS  = $(PAPEROPT_$(PAPER)) $(SPHINXOPTS) $(buildDir)
 
 
 html:
-        @old_dir=`cd .; pwd`
-
-        @`cd $(BUILDDIR)`
-
+        @`cd $(buildDir)`
         @echo &quot;remove docs from git index&quot;
-        @git ls-files | xargs -I %s git rm --cache %s
+        @git ls-files | xargs -I %s git rm -f --cache %s
 
         @echo &quot;remove any existing files&quot;
         @rm .buildinfo || true
@@ -84,32 +88,36 @@ html:
         @rm *.inv || true
         @rm *.js || true
         @rm *.rst || true
-        @rm -r doctrees || true
+        @rm -r .doctrees || true
         @rm -r _modules || true
         @rm -r _sources || true
         @rm -r _static || true
 
-        @echo &quot;find *.rs_ files and copy them as *.rst (used for static files)&quot;
+        @`cd $(rstDir)`
+        @rm *.rst || true
+        @echo &quot;copying static pages&quot;
         @find . -depth -name &quot;*.rs_&quot; -exec sh -c &#39;cp &quot;$$1&quot; &quot;$${1%.rs_}.rst&quot;&#39; _ {} \; || true
 
         @echo &quot;find python packages and generate API documentation&quot;
-        @find .. -depth -name &quot;__init__.py&quot; -exec sh -c &#39;sphinx-apidoc -f -T -e -o . &quot;$${1%__init__.py}&quot;&#39; _ {} \; || true
+        @find $(pkgDir) -depth -name &quot;__init__.py&quot; -exec sh -c &#39;sphinx-apidoc -f -T -e -o $(rstDir) &quot;$${1%__init__.py}&quot;&#39; _ {} \; || true
 
         @echo &quot;convert markdown files&quot;
-        @pandoc --from=markdown --to=rst --output=changelog.rst ../CHANGELOG.md
+        @pandoc --from=markdown --to=rst --output=$(rstDir)/changelog.rst $(pkgDir)/CHANGELOG.md
 
+        @cp -a $(rstDir)/*.rst $(buildDir)
+        @rm $(rstDir)/*.rst || true
         @echo &quot;generate HTML documentation&quot;
-        $(SPHINXBUILD) -b html $(ALLSPHINXOPTS) .
+        $(SPHINXBUILD) -b html $(buildDir) $(buildDir)
 
         @echo &quot;remove doctrees&quot;
-        @rm -r doctrees
+        @rm -r $(buildDir)/.doctrees || true
 
+        @`cd $(buildDir)`
         @echo &quot;add docs to git index&quot;
         @git add *
 
         @echo
-        @echo &quot;Build finished. The HTML page is in `cd .; pwd`.&quot;
-        @`cd $$old_dir`
+        @echo &quot;Build finished. The HTML page is in $(buildDir).&quot;
         @echo
 </pre></div>
 </div>
@@ -160,12 +168,12 @@ html:
         <li class="right" >
           <a href="sphinx.conf.html" title="Sphinx Conf"
              >previous</a> |</li>
-        <li class="nav-item nav-item-0"><a href="index.html">data_helper 0.2.2 documentation</a> &raquo;</li> 
+        <li class="nav-item nav-item-0"><a href="index.html">data_helper 0.2.3 documentation</a> &raquo;</li> 
       </ul>
     </div>
     <div class="footer" role="contentinfo">
         &copy; Copyright 2015, Qevo.
-      Last updated on 11 Sep 2015.
+      Last updated on 12 Sep 2015.
     </div>
   </body>
 </html>

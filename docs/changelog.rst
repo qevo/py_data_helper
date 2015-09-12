@@ -4,6 +4,15 @@ Change Log
 All notable changes to this project will be documented in this file.
 This project adheres to `Semantic Versioning <http://semver.org/>`__.
 
+[0.2.3] - 2015-09-12
+--------------------
+
+Changed
+~~~~~~~
+
+-  Makefile structure changed to be more readable and determine and use
+   absolute paths.
+
 [0.2.2] - 2015-09-11
 --------------------
 

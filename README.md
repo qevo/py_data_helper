@@ -1,5 +1,5 @@
 # data_helper
-version 0.2.2  [Change Log](CHANGELOG.md)
+version 0.2.3  [Change Log](CHANGELOG.md)
 
 This helper module is a simple set of functions that make some string related activities easier.
 
